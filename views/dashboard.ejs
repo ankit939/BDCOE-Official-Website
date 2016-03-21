@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/angular-toastr.css">
+  <link rel="stylesheet" href="/styles/animate.css">
+  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="/styles/sidebar-left.css">
+  <!--STYLES END-->
+  <script>
+    function scrollWin() {
+      window.scrollBy(0, 500);
+    }
+  </script>
+  </head>
+  <body ng-app="DashMod" ng-controller="DashCtrl" ng-init="getUser()">
+   <img id="preloader" src="images/preloader.gif" alt="" />
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+
+  <!-- PAGE -->
+  <div id="page">
+  
+    <!-- HEADER -->
+    <header>
+      
+      <!-- MENU BLOCK -->
+      <div class="menu_block">
+      
+        <!-- CONTAINER -->
+        <div class="container clearfix">
+          
+          <!-- LOGO -->
+          <div class="logo pull-left">
+            <a href="index.html" ><span class="b1">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
+          </div><!-- //LOGO -->
+          
+          <!-- MENU -->
+          <div class="pull-right">
+            <nav class="navmenu center">
+              <ul>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </nav>
+          </div><!-- //MENU -->
+        </div><!-- //MENU BLOCK -->
+      </div><!-- //CONTAINER -->
+    </header><!-- //HEADER -->
+            <!-- Sidebar -->
+    <aside class="sidebar-left" style="position: fixed;margin-top: 5.98%;width:15%">
+    <div style="position: relative;margin-top: 0;margin-bottom: 0;height: 150px;">
+      <img class="img-circle" ng-src="{{user.gravatarUrl}}" style="position: relative;margin-left: 24%;margin-top: 16%;height: 100px;">
+      <label>{{user.name}}</label>
+    </div>
+
+    <div class="sidebar-links">
+      <a class="link-blue selected" href="/dashboard#/">Profile</a>
+      <a class="link-red" href="/dashboard#/online_events">Online Events</a>
+      <a class="link-yellow" href="/dashboard#/account_settings">Account Settings</a>
+      <a class="link-green" href="/dashboard#/help">Help</a>
+    </div>
+  </aside>
+  <div ng-view class="animroute" style="position: relative;left: 15%;height: 597px;width: 100%;background-image: url(../images/white.png);"></div>
+
+<!--SCRIPTS-->
+<script src="/js/dependencies/sails.io.js"></script>
+<script src="/js/dependencies/jquery.js"></script>
+<script src="/js/dependencies/bootstrap.min.js"></script>
+<script src="/js/dependencies/angular.js"></script>
+<script src="/js/dependencies/angular-animate.js"></script>
+<script src="/js/dependencies/angular-resource.js"></script>
+<script src="/js/dependencies/angular-route.js"></script>
+<script src="/js/dependencies/angular-toastr.js"></script>
+<script src="/js/dependencies/angular-toastr.tpls.js"></script>
+<script src="/js/dependencies/animate.js"></script>
+<script src="/js/dependencies/jquery.BlackAndWhite.js"></script>
+<script src="/js/dependencies/jquery.flexslider-min.js"></script>
+<script src="/js/dependencies/jquery.nicescroll.min.js"></script>
+<script src="/js/dependencies/jquery.prettyPhoto.js"></script>
+<script src="/js/dependencies/members.js"></script>
+<script src="/js/dependencies/owl.carousel.js"></script>
+<script src="/js/dependencies/superfish.min.js"></script>
+<script src="/js/dependencies/wow.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/public/homepage/HomeMod.js"></script>
+<script src="/js/public/homepage/HomeCtrl.js"></script>
+<script src="/js/public/login/LoginMod.js"></script>
+<script src="/js/public/login/LoginCtrl.js"></script>
+<script src="/js/public/signup/SignupMod.js"></script>
+<script src="/js/public/signup/SignupCtrl.js"></script>
+<script src="/js/private/dashboard/DashMod.js"></script>
+<script src="/js/private/dashboard/DashCtrl.js"></script>
+<!--SCRIPTS END-->
+</body>
+</html>

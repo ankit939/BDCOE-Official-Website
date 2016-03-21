@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Satyam Aggrawal",
+    "branch": "IT",
+    "year": "4th year",
+    "image": "/images/about/1.jpg"
+  },
+  {
+    "name": "Shrikant Mittal",
+    "branch": "IT",
+    "year": "4th year",
+    "image": "/images/about/2.jpg"
+  },
+  {
+    "name": "Shivam Aggrawal",
+    "branch": "IT",
+    "year": "4th year",
+    "image": "/images/about/3.jpg"
+  },
+  { 
+    "name": "Shashank Gupta",
+    "branch": "CS-3",
+    "year": "3rd year",
+    "image": "/images/about/6.jpg"
+  },
+  {
+    "name": "Ankur Kumar",
+    "branch": "CS-1",
+    "year": "3rd year",
+    "image": "/images/about/7.jpg"
+    
+  },
+  {
+    "name": "Shivam Varshney",
+    "branch": "IT-2",
+    "year": "3rd year",
+    "image": "/images/about/4.jpg"
+  },
+  {
+    "name": "Ankit Kumar Sharma",
+    "branch": "CS-1",
+    "year": "3rd year",
+    "image": "/images/about/5.jpg"
+    
+  },
+  {
+    "name": "Shubham Aggrawal",
+    "branch": "IT-2",
+    "year": "3rd year",
+    "image": "/images/about/8.jpg"
+  },
+  {
+    "name": "Shubham Bhatia",
+    "branch": "IT-2",
+    "year": "3rd year",
+    "image": "/images/about/9.jpg"
+  },
+  {
+    "name": "Updesh Bhadoriya",
+    "branch": "IT-2",
+    "year": "3rd year",
+    "image": "/images/about/10.jpg"
+  },
+  {
+    "name": "Akshit Gupta",
+    "branch": "CS-1",
+    "year": "2nd year",
+    "image": "/images/about/11.jpg"
+  },
+  {
+     "name": "Divya Singh",
+    "branch": "CS-1",
+    "year": "2nd year",
+    "image": "/images/about/16.jpg"
+    
+  },
+  {
+    "name": "Kulsoom Abidi",
+    "branch": "CS-2",
+    "year": "2nd year",
+    "image": "/images/about/14.jpg"
+    
+  },
+   {
+    "name": "Srishti Agarwal",
+    "branch": "CS-3",
+    "year": "2nd year",
+    "image": "/images/about/15.jpg"
+  },
+  {
+    "name": "Kumar Abhishek",
+    "branch": "CS-2",
+    "year": "2nd year",
+    "image": "/images/about/18.jpg"
+  },
+  {
+    "name": "Madhav Agarwal",
+    "branch": "IT-1",
+    "year": "2nd year",
+    "image": "/images/about/12.jpg"
+    
+  },
+  {
+    "name": "Raj Kumar Maurya",
+    "branch": "IT",
+    "year": "2nd year",
+    "image": "/images/about/13.jpg"
+  },
+  {
+    "name": "Shreyansh Jain",
+    "branch": "IT-2",
+    "year": "2nd year",
+    "image": "/images/about/17.jpg"
+  },
+  {
+    "name": "Suyash Saxena",
+    "branch": "IT-2",
+    "year": "2nd year",
+    "image": "/images/about/19.jpg"
+  },
+  {
+    "name": "Shobhit Singhal",
+    "branch": "IT-2",
+    "year": "2nd year",
+    "image": "/images/about/20.jpg"
+  }
+  ]

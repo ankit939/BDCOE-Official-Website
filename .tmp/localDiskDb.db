@@ -1,0 +1,58 @@
+{
+  "data": {
+    "user": [
+      {
+        "firstname": "Ankit",
+        "lastname": "Kumar Sharma",
+        "email": "ankitkumarsharma939@gmail.com",
+        "password": "$2a$10$pFZ.iDNzDpTKU6NPyVxXb.GGvXQDeyw8jhk1YWrkILahfXYPb.Vm2",
+        "lastLoggedIn": "2016-03-08T08:26:53.913Z",
+        "gravatarUrl": "http://www.gravatar.com/avatar/9e0a63426ac8df0072d3df1394b52bc5?",
+        "createdAt": "2016-03-08T08:26:53.929Z",
+        "updatedAt": "2016-03-08T08:26:53.929Z",
+        "id": 7
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "firstname": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "lastLoggedIn": {
+        "type": "date",
+        "defaultsTo": "1970-01-01T00:00:00.000Z"
+      },
+      "gravatarUrl": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 7
+    }
+  }
+}
