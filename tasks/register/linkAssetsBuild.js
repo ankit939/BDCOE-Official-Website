@@ -7,7 +7,7 @@
  * it is a helper called by the `build` tasklist.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/link-assets-build-js
+ *   https://sailsjs.org/documentation/anatomy/my-app/tasks/register/link-assets-build-js
  *
  */
 module.exports = function(grunt) {

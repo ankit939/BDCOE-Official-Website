@@ -26,8 +26,8 @@ angular.module("HomeMod",['ngRoute','ngAnimate','toastr'])
         });
 })
 
-.controller('aboutCtrl', function ($scope, $http){
-        $http.get('/json/members.json').success(function(data) {
+.controller('aboutCtrl', function ($scope, $https){
+        $https.get('/json/members.json').success(function(data) {
           $scope.members = data;
         });
       });

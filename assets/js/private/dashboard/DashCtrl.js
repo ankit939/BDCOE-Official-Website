@@ -1,8 +1,8 @@
-angular.module('DashMod').controller('DashCtrl',['$scope', '$http', function($scope, $http){
+angular.module('DashMod').controller('DashCtrl',['$scope', '$https', function($scope, $https){
 	$scope.getUser = function(){
 		console.log('Getting User...');
 		
-		$http.get('/getuser')
+		$https.get('/getuser')
 		.then(function onSuccess(user){
 			$scope.user = user.data;
 		})

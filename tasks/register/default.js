@@ -13,7 +13,7 @@
  * will be run instead of this one.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/default-js
+ *   https://sailsjs.org/documentation/anatomy/my-app/tasks/register/default-js
  *
  */
 module.exports = function (grunt) {

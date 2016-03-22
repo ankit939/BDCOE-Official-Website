@@ -35,10 +35,10 @@
  * In AJAX/Socket-heavy apps, just send a GET request to the /csrfToken route to get a valid token.
  *
  * For more information on CSRF, check out:
- * http://en.wikipedia.org/wiki/Cross-site_request_forgery
+ * https://en.wikipedia.org/wiki/Cross-site_request_forgery
  *
  * For more information on this configuration file, including info on CSRF + CORS, see:
- * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.csrf.html
+ * https://sailsjs.org/#!/documentation/reference/sails.config/sails.config.csrf.html
  *
  */
 

@@ -1,6 +1,6 @@
 /**
  * @license AngularJS v1.5.0
- * (c) 2010-2016 Google, Inc. http://angularjs.org
+ * (c) 2010-2016 Google, Inc. https://angularjs.org
  * License: MIT
  */
 (function(window, angular, undefined) {'use strict';
@@ -67,17 +67,17 @@ function shallowClearAndCopy(src, dst) {
 /**
  * @ngdoc service
  * @name $resource
- * @requires $http
+ * @requires $https
  * @requires ng.$log
  * @requires $q
  * @requires ng.$timeout
  *
  * @description
  * A factory which creates a resource object that lets you interact with
- * [RESTful](http://en.wikipedia.org/wiki/Representational_State_Transfer) server-side data sources.
+ * [RESTful](https://en.wikipedia.org/wiki/Representational_State_Transfer) server-side data sources.
  *
  * The returned resource object has action methods which provide high-level behaviors without
- * the need to interact with the low level {@link ng.$http $http} service.
+ * the need to interact with the low level {@link ng.$https $https} service.
  *
  * Requires the {@link ngResource `ngResource`} module to be installed.
  *
@@ -95,11 +95,11 @@ function shallowClearAndCopy(src, dst) {
  *
  * @param {string} url A parameterized URL template with parameters prefixed by `:` as in
  *   `/user/:username`. If you are using a URL with a port number (e.g.
- *   `http://example.com:8080/api`), it will be respected.
+ *   `https://example.com:8080/api`), it will be respected.
  *
  *   If you are using a url with a suffix, just add the suffix, like this:
- *   `$resource('http://example.com/resource.json')` or `$resource('http://example.com/:id.json')`
- *   or even `$resource('http://example.com/resource/:resource_id.:format')`
+ *   `$resource('https://example.com/resource.json')` or `$resource('https://example.com/:id.json')`
+ *   or even `$resource('https://example.com/resource/:resource_id.:format')`
  *   If the parameter before the suffix is empty, :resource_id in this case, then the `/.` will be
  *   collapsed down to a single `.`.  If you need this sequence to appear and not collapse then you
  *   can escape it with `/\.`.
@@ -121,7 +121,7 @@ function shallowClearAndCopy(src, dst) {
  *
  * @param {Object.<Object>=} actions Hash with declaration of custom actions that should extend
  *   the default set of resource actions. The declaration should be created in the format of {@link
- *   ng.$http#usage $http.config}:
+ *   ng.$https#usage $https.config}:
  *
  *       {action1: {method:?, params:?, isArray:?, headers:?, ...},
  *        action2: {method:?, params:?, isArray:?, headers:?, ...},
@@ -131,7 +131,7 @@ function shallowClearAndCopy(src, dst) {
  *
  *   - **`action`** – {string} – The name of action. This name becomes the name of the method on
  *     your resource object.
- *   - **`method`** – {string} – Case insensitive HTTP method (e.g. `GET`, `POST`, `PUT`,
+ *   - **`method`** – {string} – Case insensitive https method (e.g. `GET`, `POST`, `PUT`,
  *     `DELETE`, `JSONP`, etc).
  *   - **`params`** – {Object=} – Optional set of pre-bound parameters for this action. If any of
  *     the parameter value is a function, it will be executed every time when a param value needs to
@@ -142,24 +142,24 @@ function shallowClearAndCopy(src, dst) {
  *     see `returns` section.
  *   - **`transformRequest`** –
  *     `{function(data, headersGetter)|Array.<function(data, headersGetter)>}` –
- *     transform function or an array of such functions. The transform function takes the http
+ *     transform function or an array of such functions. The transform function takes the https
  *     request body and headers and returns its transformed (typically serialized) version.
  *     By default, transformRequest will contain one function that checks if the request data is
  *     an object and serializes to using `angular.toJson`. To prevent this behavior, set
  *     `transformRequest` to an empty array: `transformRequest: []`
  *   - **`transformResponse`** –
  *     `{function(data, headersGetter)|Array.<function(data, headersGetter)>}` –
- *     transform function or an array of such functions. The transform function takes the http
+ *     transform function or an array of such functions. The transform function takes the https
  *     response body and headers and returns its transformed (typically deserialized) version.
  *     By default, transformResponse will contain one function that checks if the response looks
  *     like a JSON string and deserializes it using `angular.fromJson`. To prevent this behavior,
  *     set `transformResponse` to an empty array: `transformResponse: []`
- *   - **`cache`** – `{boolean|Cache}` – If true, a default $http cache will be used to cache the
+ *   - **`cache`** – `{boolean|Cache}` – If true, a default $https cache will be used to cache the
  *     GET request, otherwise if a cache instance built with
  *     {@link ng.$cacheFactory $cacheFactory}, this cache will be used for
  *     caching.
  *   - **`timeout`** – `{number}` – timeout in milliseconds.<br />
- *     **Note:** In contrast to {@link ng.$http#usage $http.config}, {@link ng.$q promises} are
+ *     **Note:** In contrast to {@link ng.$https#usage $https.config}, {@link ng.$q promises} are
  *     **not** supported in $resource, because the same value would be used for multiple requests.
  *     If you are looking for a way to cancel requests, you should use the `cancellable` option.
  *   - **`cancellable`** – `{boolean}` – if set to true, the request made by a "non-instance" call
@@ -168,13 +168,13 @@ function shallowClearAndCopy(src, dst) {
  *     completed/cancelled request will have no effect.<br />
  *   - **`withCredentials`** - `{boolean}` - whether to set the `withCredentials` flag on the
  *     XHR object. See
- *     [requests with credentials](https://developer.mozilla.org/en/http_access_control#section_5)
+ *     [requests with credentials](https://developer.mozilla.org/en/https_access_control#section_5)
  *     for more information.
  *   - **`responseType`** - `{string}` - see
- *     [requestType](https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#responseType).
+ *     [requestType](https://developer.mozilla.org/en-US/docs/DOM/XMLhttpsRequest#responseType).
  *   - **`interceptor`** - `{Object=}` - The interceptor object has two optional methods -
  *     `response` and `responseError`. Both `response` and `responseError` interceptors get called
- *     with `http response` object. See {@link ng.$http $http interceptors}.
+ *     with `https response` object. See {@link ng.$https $https interceptors}.
  *
  * @param {Object} options Hash with custom settings that should extend the
  *   default `$resourceProvider` behavior.  The supported options are:
@@ -195,7 +195,7 @@ function shallowClearAndCopy(src, dst) {
  *     'delete': {method:'DELETE'} };
  *   ```
  *
- *   Calling these methods invoke an {@link ng.$http} with the specified http method,
+ *   Calling these methods invoke an {@link ng.$https} with the specified https method,
  *   destination and parameters. When the data is returned from the server then the object is an
  *   instance of the resource class. The actions `save`, `remove` and `delete` are available on it
  *   as  methods with the `$` prefix. This allows you to easily perform CRUD operations (create,
@@ -219,14 +219,14 @@ function shallowClearAndCopy(src, dst) {
  *   The action methods on the class object or instance object can be invoked with the following
  *   parameters:
  *
- *   - HTTP GET "class" actions: `Resource.action([parameters], [success], [error])`
+ *   - https GET "class" actions: `Resource.action([parameters], [success], [error])`
  *   - non-GET "class" actions: `Resource.action([parameters], postData, [success], [error])`
  *   - non-GET instance actions:  `instance.$action([parameters], [success], [error])`
  *
  *
  *   Success callback is called with (value, responseHeaders) arguments, where the value is
  *   the populated resource instance or collection object. The error callback is called
- *   with (httpResponse) argument.
+ *   with (httpsResponse) argument.
  *
  *   Class actions return empty instance (with additional properties below).
  *   Instance actions return promise of the action.
@@ -241,7 +241,7 @@ function shallowClearAndCopy(src, dst) {
  *     {@link ngRoute.$routeProvider resolve section of $routeProvider.when()} to defer view
  *     rendering until the resource(s) are loaded.
  *
- *     On failure, the promise is rejected with the {@link ng.$http http response} object, without
+ *     On failure, the promise is rejected with the {@link ng.$https https response} object, without
  *     the `resource` property.
  *
  *     If an interceptor object was provided, the promise will instead be resolved with the value
@@ -298,7 +298,7 @@ function shallowClearAndCopy(src, dst) {
  * The object returned from this function execution is a resource "class" which has "static" method
  * for each action in the definition.
  *
- * Calling these methods invoke `$http` on the `url` template with the given `method`, `params` and
+ * Calling these methods invoke `$https` on the `url` template with the given `method`, `params` and
  * `headers`.
  *
  * @example
@@ -318,8 +318,8 @@ function shallowClearAndCopy(src, dst) {
    ```
  *
  * It's worth noting that the success callback for `get`, `query` and other methods gets passed
- * in the response that came from the server as well as $http header getter function, so one
- * could rewrite the above example and get access to http headers as:
+ * in the response that came from the server as well as $https header getter function, so one
+ * could rewrite the above example and get access to https headers as:
  *
    ```js
      var User = $resource('/user/:userId', {userId:'@id'});
@@ -327,12 +327,12 @@ function shallowClearAndCopy(src, dst) {
        user.abc = true;
        user.$save(function(user, putResponseHeaders) {
          //user => saved user object
-         //putResponseHeaders => $http header getter
+         //putResponseHeaders => $https header getter
        });
      });
    ```
  *
- * You can also access the raw `$http` promise via the `$promise` property on the object returned
+ * You can also access the raw `$https` promise via the `$promise` property on the object returned
  *
    ```
      var User = $resource('/user/:userId', {userId:'@id'});
@@ -421,7 +421,7 @@ angular.module('ngResource', ['ng']).
       }
     };
 
-    this.$get = ['$http', '$log', '$q', '$timeout', function($http, $log, $q, $timeout) {
+    this.$get = ['$https', '$log', '$q', '$timeout', function($https, $log, $q, $timeout) {
 
       var noop = angular.noop,
         forEach = angular.forEach,
@@ -431,7 +431,7 @@ angular.module('ngResource', ['ng']).
 
       /**
        * We need our custom method because encodeURIComponent is too aggressive and doesn't follow
-       * http://www.ietf.org/rfc/rfc3986.txt with regards to the character set
+       * https://www.ietf.org/rfc/rfc3986.txt with regards to the character set
        * (pchar) allowed in path segments:
        *    segment       = *pchar
        *    pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
@@ -451,7 +451,7 @@ angular.module('ngResource', ['ng']).
       /**
        * This method is intended for encoding *key* or *value* parts of query component. We need a
        * custom method because encodeURIComponent is too aggressive and encodes stuff that doesn't
-       * have to be encoded per http://tools.ietf.org/html/rfc3986:
+       * have to be encoded per https://tools.ietf.org/html/rfc3986:
        *    query       = *( pchar / "/" / "?" )
        *    pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
        *    unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
@@ -530,13 +530,13 @@ angular.module('ngResource', ['ng']).
           }
 
           // then replace collapse `/.` if found in the last URL path segment before the query
-          // E.g. `http://url.com/id./format?q=x` becomes `http://url.com/id.format?q=x`
+          // E.g. `https://url.com/id./format?q=x` becomes `https://url.com/id.format?q=x`
           url = url.replace(/\/\.(?=\w+($|\?))/, '.');
           // replace escaped `/\.` with `/.`
           config.url = protocolAndDomain + url.replace(/\/\\\./, '/.');
 
 
-          // set params - delegate param encoding to $http
+          // set params - delegate param encoding to $https
           forEach(params, function(value, key) {
             if (!self.urlParams[key]) {
               config.params = config.params || {};
@@ -637,7 +637,7 @@ angular.module('ngResource', ['ng']).
 
             var isInstanceCall = this instanceof Resource;
             var value = isInstanceCall ? data : (action.isArray ? [] : new Resource(data));
-            var httpConfig = {};
+            var httpsConfig = {};
             var responseInterceptor = action.interceptor && action.interceptor.response ||
               defaultResponseInterceptor;
             var responseErrorInterceptor = action.interceptor && action.interceptor.responseError ||
@@ -648,7 +648,7 @@ angular.module('ngResource', ['ng']).
             forEach(action, function(value, key) {
               switch (key) {
                 default:
-                  httpConfig[key] = copy(value);
+                  httpsConfig[key] = copy(value);
                   break;
                 case 'params':
                 case 'isArray':
@@ -660,19 +660,19 @@ angular.module('ngResource', ['ng']).
 
             if (!isInstanceCall && cancellable) {
               timeoutDeferred = $q.defer();
-              httpConfig.timeout = timeoutDeferred.promise;
+              httpsConfig.timeout = timeoutDeferred.promise;
 
               if (numericTimeout) {
                 numericTimeoutPromise = $timeout(timeoutDeferred.resolve, numericTimeout);
               }
             }
 
-            if (hasBody) httpConfig.data = data;
-            route.setUrlParams(httpConfig,
+            if (hasBody) httpsConfig.data = data;
+            route.setUrlParams(httpsConfig,
               extend({}, extractParams(data, action.params || {}), params),
               action.url);
 
-            var promise = $http(httpConfig).then(function(response) {
+            var promise = $https(httpsConfig).then(function(response) {
               var data = response.data;
 
               if (data) {
@@ -682,7 +682,7 @@ angular.module('ngResource', ['ng']).
                   throw $resourceMinErr('badcfg',
                       'Error in resource configuration for action `{0}`. Expected response to ' +
                       'contain an {1} but got an {2} (Request: {3} {4})', name, action.isArray ? 'array' : 'object',
-                    angular.isArray(data) ? 'array' : 'object', httpConfig.method, httpConfig.url);
+                    angular.isArray(data) ? 'array' : 'object', httpsConfig.method, httpsConfig.url);
                 }
                 // jshint +W018
                 if (action.isArray) {
@@ -716,7 +716,7 @@ angular.module('ngResource', ['ng']).
               if (!isInstanceCall && cancellable) {
                 value.$cancelRequest = angular.noop;
                 $timeout.cancel(numericTimeoutPromise);
-                timeoutDeferred = numericTimeoutPromise = httpConfig.timeout = null;
+                timeoutDeferred = numericTimeoutPromise = httpsConfig.timeout = null;
               }
             });
 

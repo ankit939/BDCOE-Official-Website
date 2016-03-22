@@ -1,11 +1,11 @@
 /*global angular*/
-angular.module('SignupMod').controller('SignupCtrl',['$scope', '$http','toastr', function($scope, $http, toastr){
+angular.module('SignupMod').controller('SignupCtrl',['$scope', '$https','toastr', function($scope, $https, toastr){
 	console.log("Signup Controller initialized...");
 	$scope.runSignup = function(){
 		console.log("Signing Up"+ $scope.firstname);
 		
 		//Submit To sails Server
-		$http.post('/signup', {
+		$https.post('/signup', {
 			firstname: $scope.firstname,
 			lastname: $scope.lastname,
 			email: $scope.email,

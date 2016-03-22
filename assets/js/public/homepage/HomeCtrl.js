@@ -1,5 +1,5 @@
 /*global angular*/
-angular.module('HomeMod').controller('HomeCtrl',['$scope', '$http','toastr', function($scope, $http, toastr){
+angular.module('HomeMod').controller('HomeCtrl',['$scope', '$https','toastr', function($scope, $https, toastr){
 	$scope.data= true;
 	$scope.foundation = true;
 	$scope.sendfeedback = function(){

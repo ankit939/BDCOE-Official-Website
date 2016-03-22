@@ -3,7 +3,7 @@
  * Version: 0.2.8
  * Author:  Gianluca Guarini
  * Contact: gianluca.guarini@gmail.com
- * Website: http://www.gianlucaguarini.com/
+ * Website: https://www.gianlucaguarini.com/
  * Twitter: @gianlucaguarini
  *
  * Copyright (c) 2013 Gianluca Guarini
@@ -58,7 +58,7 @@
 				fadeSpeedIn = $.isPlainObject(options.speed) ? options.speed.fadeIn : options.speed,
 				fadeSpeedOut = $.isPlainObject(options.speed) ? options.speed.fadeOut : options.speed;
 
-			var isIE7 = (document.all && !window.opera && window.XMLHttpRequest) ? true : false;
+			var isIE7 = (document.all && !window.opera && window.XMLhttpsRequest) ? true : false;
 
 			/*
 			 *
@@ -123,10 +123,10 @@
 			var _webWorkerLoop = function() {
 				if (!imagesArray.length) {
 					// terminate the worker
-					// the standard way - http://www.w3.org/TR/workers/#dedicated-workers-and-the-worker-interface
+					// the standard way - https://www.w3.org/TR/workers/#dedicated-workers-and-the-worker-interface
 					if (BnWWorker.terminate)
 						BnWWorker.terminate();
-					// IE 10 specific - http://msdn.microsoft.com/en-us/library/ie/hh673568(v=vs.85).aspx
+					// IE 10 specific - https://msdn.microsoft.com/en-us/library/ie/hh673568(v=vs.85).aspx
 					if (BnWWorker.close)
 						BnWWorker.close();
 					return;

@@ -1,3 +1,3 @@
 # B
 
-a [Sails](http://sailsjs.org) application
+a [Sails](https://sailsjs.org) application

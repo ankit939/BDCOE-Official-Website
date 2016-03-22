@@ -1,15 +1,15 @@
 /**
- * HTTP Server Settings
- * (sails.config.http)
+ * https Server Settings
+ * (sails.config.https)
  *
- * Configuration for the underlying HTTP server in Sails.
- * Only applies to HTTP requests (not WebSockets)
+ * Configuration for the underlying https server in Sails.
+ * Only applies to https requests (not WebSockets)
  *
  * For more information on configuration, check out:
- * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.http.html
+ * https://sailsjs.org/#!/documentation/reference/sails.config/sails.config.https.html
  */
 
-module.exports.http = {
+module.exports.https = {
 
   /****************************************************************************
   *                                                                           *
@@ -25,7 +25,7 @@ module.exports.http = {
 
   /***************************************************************************
   *                                                                          *
-  * The order in which middleware should be run for HTTP request. (the Sails *
+  * The order in which middleware should be run for https request. (the Sails *
   * router is invoked by the "router" middleware below.)                     *
   *                                                                          *
   ***************************************************************************/
@@ -62,10 +62,10 @@ module.exports.http = {
 
   /***************************************************************************
   *                                                                          *
-  * The body parser that will handle incoming multipart HTTP requests. By    *
+  * The body parser that will handle incoming multipart https requests. By    *
   * default as of v0.10, Sails uses                                          *
-  * [skipper](http://github.com/balderdashy/skipper). See                    *
-  * http://www.senchalabs.org/connect/multipart.html for other options.      *
+  * [skipper](https://github.com/balderdashy/skipper). See                    *
+  * https://www.senchalabs.org/connect/multipart.html for other options.      *
   *                                                                          *
   ***************************************************************************/
 
@@ -78,7 +78,7 @@ module.exports.http = {
   * The number of seconds to cache flat files on disk being served by        *
   * Express static middleware (by default, these files are in `.tmp/public`) *
   *                                                                          *
-  * The HTTP static cache is only active in a 'production' environment,      *
+  * The https static cache is only active in a 'production' environment,      *
   * since that's the only time Express will cache flat-files.                *
   *                                                                          *
   ***************************************************************************/
