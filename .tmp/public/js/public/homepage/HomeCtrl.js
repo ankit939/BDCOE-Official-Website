@@ -1,5 +1,5 @@
+/*global angular*/
 angular.module('HomeMod').controller('HomeCtrl',['$scope', '$http','toastr', function($scope, $http, toastr){
-	console.log("Home Controller initialized...");
 	$scope.data= true;
 	$scope.foundation = true;
 	$scope.sendfeedback = function(){

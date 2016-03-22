@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module('LoginMod').controller('LoginCtrl',['$scope', '$http','toastr', function($scope, $http, toastr){
 	console.log("Login Controller initialized...");
 	

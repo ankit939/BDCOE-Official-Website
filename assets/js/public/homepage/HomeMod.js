@@ -1,3 +1,4 @@
+/*global angular*/
 angular.module("HomeMod",['ngRoute','ngAnimate','toastr'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
