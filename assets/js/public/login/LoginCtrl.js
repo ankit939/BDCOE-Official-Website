@@ -1,6 +1,5 @@
 /*global angular*/
 angular.module('LoginMod').controller('LoginCtrl',['$scope', '$https','toastr', function($scope, $https, toastr){
-	console.log("Login Controller initialized...");
 	
 	$scope.runLogin = function(){
 		$https.put('/login',{

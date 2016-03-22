@@ -1,6 +1,5 @@
 /*global angular*/
 angular.module('SignupMod').controller('SignupCtrl',['$scope', '$https','toastr', function($scope, $https, toastr){
-	console.log("Signup Controller initialized...");
 	$scope.runSignup = function(){
 		console.log("Signing Up"+ $scope.firstname);
 		
