@@ -4,7 +4,7 @@
  * ---------------------------------------------------------------
  *
  * Copy files and/or folders from your `assets/` directory into
- * the web root (`.tmp/public`) so they can be served via https,
+ * the web root (`.tmp/public`) so they can be served via http,
  * and also for further pre-processing by other Grunt tasks.
  *
  * #### Normal usage (`sails lift`)

@@ -1,15 +1,15 @@
 /**
- * https Server Settings
- * (sails.config.https)
+ * http Server Settings
+ * (sails.config.http)
  *
- * Configuration for the underlying https server in Sails.
- * Only applies to https requests (not WebSockets)
+ * Configuration for the underlying http server in Sails.
+ * Only applies to http requests (not WebSockets)
  *
  * For more information on configuration, check out:
- * https://sailsjs.org/#!/documentation/reference/sails.config/sails.config.https.html
+ * https://sailsjs.org/#!/documentation/reference/sails.config/sails.config.http.html
  */
 
-module.exports.https = {
+module.exports.http = {
 
   /****************************************************************************
   *                                                                           *
@@ -25,7 +25,7 @@ module.exports.https = {
 
   /***************************************************************************
   *                                                                          *
-  * The order in which middleware should be run for https request. (the Sails *
+  * The order in which middleware should be run for http request. (the Sails *
   * router is invoked by the "router" middleware below.)                     *
   *                                                                          *
   ***************************************************************************/
@@ -62,7 +62,7 @@ module.exports.https = {
 
   /***************************************************************************
   *                                                                          *
-  * The body parser that will handle incoming multipart https requests. By    *
+  * The body parser that will handle incoming multipart http requests. By    *
   * default as of v0.10, Sails uses                                          *
   * [skipper](https://github.com/balderdashy/skipper). See                    *
   * https://www.senchalabs.org/connect/multipart.html for other options.      *
@@ -78,7 +78,7 @@ module.exports.https = {
   * The number of seconds to cache flat files on disk being served by        *
   * Express static middleware (by default, these files are in `.tmp/public`) *
   *                                                                          *
-  * The https static cache is only active in a 'production' environment,      *
+  * The http static cache is only active in a 'production' environment,      *
   * since that's the only time Express will cache flat-files.                *
   *                                                                          *
   ***************************************************************************/

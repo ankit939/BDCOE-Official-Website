@@ -30,9 +30,9 @@
 module.exports = {
 
   /***************************************************************************
-   * Your SSL certificate and key, if you want to be able to serve https      *
+   * Your SSL certificate and key, if you want to be able to serve http      *
    * responses over https:// and/or use websockets over the wss:// protocol  *
-   * (recommended for https, strongly encouraged for WebSockets)              *
+   * (recommended for http, strongly encouraged for WebSockets)              *
    *                                                                         *
    * In this example, we'll assume you created a folder in your project,     *
    * `config/ssl` and dumped your certificate/key files there:               *
@@ -81,5 +81,5 @@ module.exports = {
    ***************************************************************************/
 
    environment: process.env.NODE_ENV || 'development'
-
+   
 };

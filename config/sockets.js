@@ -24,7 +24,7 @@ module.exports.sockets = {
   * of clustered deployments cannot share memory, since they are on          *
   * physically different machines. On top of that, there is no guarantee     *
   * that a user will "stick" with the same server between requests (whether  *
-  * https or sockets), since the load balancer will route each request to the *
+  * http or sockets), since the load balancer will route each request to the *
   * Sails server with the most available resources. However that means that  *
   * all room/pubsub/socket processing and shared memory has to be offloaded  *
   * to a shared, remote messaging queue (usually Redis)                      *
@@ -78,7 +78,7 @@ module.exports.sockets = {
   * performed with the server.                                               *
   *                                                                          *
   * By default, when a socket tries to connect, Sails allows it, every time. *
-  * (much in the same way any https request is allowed to reach your routes.  *
+  * (much in the same way any http request is allowed to reach your routes.  *
   * If no valid cookie was sent, a temporary session will be created for the *
   * connecting socket.                                                       *
   *                                                                          *
@@ -102,7 +102,7 @@ module.exports.sockets = {
   * io.sails.connect('https://localhost:1337?cookie=smokeybear')              *
   *                                                                          *
   * Finally note that the user's cookie is NOT (and will never be) accessible*
-  * from client-side javascript. Using https-only cookies is crucial for your *
+  * from client-side javascript. Using http-only cookies is crucial for your *
   * app's security.                                                          *
   *                                                                          *
   ***************************************************************************/
