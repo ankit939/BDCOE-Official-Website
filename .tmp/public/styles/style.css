@@ -919,7 +919,6 @@ ul.project_info li span {color:#979797;}
 	min-height: 597px;
 	overflow: hidden;
 }
-
 .corouselimg{
 	position: relative;
     left: 3.9%;
@@ -928,7 +927,6 @@ ul.project_info li span {color:#979797;}
     height: auto;
     min-width: 46%;
 }
-
 .corouseldiv{
 	width: 38.5%;
     height: auto;
@@ -939,27 +937,6 @@ ul.project_info li span {color:#979797;}
     overflow-y: hidden;
     min-width: 35%;
 }
-
-.corousel2img{
-	position: relative;
-    left: 3.9%;
-    margin-top: -464px;
-    width: 46.3%;
-    height: auto;
-    min-width: 46%;
-}
-
-.corousel2div{
-    width: 38.5%;
-    height: auto;
-    position: relative;
-    left: 7.8%;
-    margin-top: -26.4%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    min-width: 35%;
-}
-
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
       margin: auto;
