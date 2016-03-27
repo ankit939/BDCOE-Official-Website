@@ -11,7 +11,7 @@ angular.module('SignupMod').controller('SignupCtrl',['$scope', '$http','toastr',
 			password: $scope.password
 		})
 		.then(function onSuccess(response){
-			toastr.success('Now login your account','Registered Successfully', {
+			toastr.success('Now login to your account','Registered Successfully', {
 					closeButton:true
 				})
 		})

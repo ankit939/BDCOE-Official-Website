@@ -1,12 +1,9 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>BDCoE</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
-  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> 
-
+  <title>Log In-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
@@ -35,7 +32,7 @@
       <div class="menu_block">
       
         <!-- CONTAINER -->
-        <div class="container clearfix">
+        <div class="container clearfix" style="min-width: 1050px;">
           
           <!-- LOGO -->
           <div class="logo pull-left">
@@ -43,37 +40,37 @@
           </div><!-- //LOGO -->
           
           <!-- MENU -->
-          <div class="pull-right" style="position: absolute;left: 22%;">
+         <div class="pull-right" style="position: absolute;left: 21%;">
             <nav class="navmenu center">
               <ul>
-                <li class="first scroll_btn"><a href="/#/">Home</a></li>
-                <li class="scroll_btn"><a href="/#/what_we_do">What We Do</a></li>
-                <li class="scroll_btn"><a href="/#/portfolio">Portfolio</a></li>
-                <li class="scroll_btn"><a href="/#/about_us">About Us</a></li>
-                <li class="scroll_btn"><a href="/#/news">News</a></li>
-                <li class="scroll_btn last"><a href="/#/contact_us">Contact Us</a></li>
-                <li><a href="/login" >Login</a></li>
-                <li><a href="/signup" >Register</a></li>
+                <li class="first scroll_btn"><a href="/#/"><span class=" glyphicon glyphicon-home" style="padding-right:3px"></span>Home</a></li>
+                <li class="scroll_btn"><a href="/#/what_we_do"><span class=" glyphicon glyphicon-cog" style="padding-right:3px"></span>What We Do</a></li>
+                <li class="scroll_btn"><a href="/#/portfolio"><span class=" glyphicon glyphicon-picture" style="padding-right:3px"></span>Portfolio</a></li>
+                <li class="scroll_btn"><a href="/#/about_us"><span class=" glyphicon glyphicon-tree-deciduous" style="padding-right:3px"></span>About Us</a></li>
+                <li class="scroll_btn"><a href="/#/news"><span class=" glyphicon glyphicon-list-alt" style="padding-right:3px"></span>News</a></li>
+                <li class="scroll_btn last"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
+                <li><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
+                <li><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Register</a></li>
               </ul>
             </nav>
           </div><!-- //MENU -->
         </div><!-- //MENU BLOCK -->
       </div><!-- //CONTAINER -->
     </header><!-- //HEADER -->
-    <div id="loginbg">
+    <div id="loginbg" style="background-image: url(../images/white.png);">
       <div class="loginformbg">
      <img class="img-circle bdlogo" src="/images/logo.png">
     <form ng-submit="runLogin()" style="position: absolute;top: 41%;left: 27%;right:27%;width: 48%;">
       <div class="col-2">
           <label>
             Email
-            <input type="email" class="form-control" ng-model="email" placeholder="Enter email" tabindex="1" required/>
+            <input type="email" class="form-control" ng-model="email" placeholder="Enter email..." tabindex="1" required/>
           </label>
         </div>
         <div class="col-2">
           <label>
             Password
-            <input type="password" class="form-control" ng-model="password" placeholder="Enter password" tabindex="2" required/>
+            <input type="password" class="form-control" ng-model="password" placeholder="Enter password..." tabindex="2" required/>
           </label>
         </div>
           <input type="submit" class="form-control" value="login" style="position:relative;width:45%;left:27%;top:27%" required/>
@@ -105,7 +102,7 @@
       </div>
       </div>
   </div>
-    
+  </div>
   <!--SCRIPTS-->
   <script src="/js/dependencies/sails.io.js"></script>
   <script src="/js/dependencies/jquery.js"></script>

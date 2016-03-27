@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dashboard-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
@@ -33,18 +36,18 @@
       <div class="menu_block">
       
         <!-- CONTAINER -->
-        <div class="container clearfix">
+        <div class="container clearfix" style="min-width: 1050px;">
           
           <!-- LOGO -->
-          <div class="logo pull-left">
-            <a href="index.html" ><span class="b1">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
+          <div class="logo pull-left" style="cursor:default">
+            <a><span class="b1">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
           </div><!-- //LOGO -->
           
           <!-- MENU -->
           <div class="pull-right">
             <nav class="navmenu center">
               <ul>
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout"><span class=" glyphicon glyphicon-log-out" style="padding-right:3px"></span>Logout</a></li>
               </ul>
             </nav>
           </div><!-- //MENU -->
@@ -52,20 +55,20 @@
       </div><!-- //CONTAINER -->
     </header><!-- //HEADER -->
             <!-- Sidebar -->
-    <aside class="sidebar-left" style="position: fixed;margin-top: 5.98%;width:15%">
+    <aside class="sidebar-left">
     <div style="position: relative;margin-top: 0;margin-bottom: 0;height: 150px;">
       <img class="img-circle" ng-src="{{user.gravatarUrl}}" style="position: relative;margin-left: 24%;margin-top: 16%;height: 100px;">
       <label>{{user.name}}</label>
     </div>
 
     <div class="sidebar-links">
-      <a class="link-blue selected" href="/dashboard#/">Profile</a>
-      <a class="link-red" href="/dashboard#/online_events">Online Events</a>
-      <a class="link-yellow" href="/dashboard#/account_settings">Account Settings</a>
-      <a class="link-green" href="/dashboard#/help">Help</a>
+      <a class="link-blue selected" href="/dashboard#/"><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Profile</a>
+      <a class="link-red" href="/dashboard#/online_events"><span class=" glyphicon glyphicon-flag" style="padding-right:3px"></span>Online Events</a>
+      <a class="link-yellow" href="/dashboard#/account_settings"><span class=" glyphicon glyphicon-wrench" style="padding-right:3px"></span>Account Settings</a>
+      <a class="link-green" href="/dashboard#/help"><span class=" glyphicon glyphicon-info-sign" style="padding-right:3px"></span>Help</a>
     </div>
   </aside>
-  <div ng-view class="animroute" style="position: relative;left: 15%;height: 597px;width: 100%;background-image: url(../images/white.png);"></div>
+  <div ng-view class="animroute" style="position: relative;height: 597px;width: 100%;background-image: url(../images/white.png);min-width:1050px"></div>
 
 <!--SCRIPTS-->
 <script src="/js/dependencies/sails.io.js"></script>

@@ -59,6 +59,14 @@ var jsFilesToInject = [
   //'js/**/*.js'
 ];
 
+var fontsToInject= [
+  
+  'fonts/glyphicons-halflings-regular.eot',
+  'fonts/glyphicons-halflings-regular.svg',
+  'fonts/glyphicons-halflings-regular.ttf',
+  'fonts/glyphicons-halflings-regular.woff',
+  'fonts/glyphicons-halflings-regular.woff2',
+  ];
 
 // Client-side HTML templates are injected using the sources below
 // The ordering of these templates shouldn't matter.

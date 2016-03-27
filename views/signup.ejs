@@ -3,8 +3,7 @@
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>BDCoE</title>
-
+  <title>Sign Up-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
@@ -24,7 +23,7 @@
 <div class="preloader_hide">
 
   <!-- PAGE -->
-  <div id="page" style="background-image:url(../images/white2.jpg);min-width:900px">
+  <div id="page" style="min-width:900px">
   
     <!-- HEADER -->
     <header id="navbar">
@@ -33,7 +32,7 @@
       <div class="menu_block">
       
         <!-- CONTAINER -->
-        <div class="container clearfix">
+        <div class="container clearfix" style="min-width: 1050px;">
           
           <!-- LOGO -->
           <div class="logo pull-left">
@@ -41,59 +40,53 @@
           </div><!-- //LOGO -->
           
           <!-- MENU -->
-          <div class="pull-right" style="position: absolute;left: 22%;">
+          <div class="pull-right" style="position: absolute;left: 21%;">
             <nav class="navmenu center">
               <ul>
-                <li class="first scroll_btn"><a href="/#/">Home</a></li>
-                <li class="scroll_btn"><a href="/#/what_we_do">What We Do</a></li>
-                <li class="scroll_btn"><a href="/#/portfolio">Portfolio</a></li>
-                <li class="scroll_btn"><a href="/#/about_us">About Us</a></li>
-                <li class="scroll_btn"><a href="/#/news">News</a></li>
-                <li class="scroll_btn last"><a href="/#/contact_us">Contact Us</a></li>
-                <li><a href="/login" >Login</a></li>
-                <li><a href="/signup" >Register</a></li>
+                <li class="first scroll_btn"><a href="/#/"><span class=" glyphicon glyphicon-home" style="padding-right:3px"></span>Home</a></li>
+                <li class="scroll_btn"><a href="/#/what_we_do"><span class=" glyphicon glyphicon-cog" style="padding-right:3px"></span>What We Do</a></li>
+                <li class="scroll_btn"><a href="/#/portfolio"><span class=" glyphicon glyphicon-picture" style="padding-right:3px"></span>Portfolio</a></li>
+                <li class="scroll_btn"><a href="/#/about_us"><span class=" glyphicon glyphicon-tree-deciduous" style="padding-right:3px"></span>About Us</a></li>
+                <li class="scroll_btn"><a href="/#/news"><span class=" glyphicon glyphicon-list-alt" style="padding-right:3px"></span>News</a></li>
+                <li class="scroll_btn last"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
+                <li><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
+                <li><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Register</a></li>
               </ul>
             </nav>
           </div><!-- //MENU -->
         </div><!-- //MENU BLOCK -->
       </div><!-- //CONTAINER -->
     </header><!-- //HEADER -->
-<div id="loginbg" style="margin-left:0;margin-right:0;">
+<div id="loginbg" style="margin-left:0;margin-right:0;background-image: url(../images/white.png);">
   <div class="loginformbg">
-  <form ng-submit="runSignup()" style="position: absolute;right: 28%;left: 28%;top: 16%;">
-  <div class="container" >
+  <form ng-submit="runSignup()" style="position: absolute;right: 27%;left: 27%;top: 19%;">
+  <div class="container" style="width:99%">
   <div class="col-2">
     <label>
       Firstname
-      <input ng-model="firstname" class="form-control" ng-maxlength="10"   tabindex="1" placeholder="Enter firstname" required />
+      <input ng-model="firstname" class="form-control" ng-maxlength="10"   tabindex="1" placeholder="Enter firstname..." required />
     </label>
   </div>
   <div class="col-2">
     <label>
       Lastname
-      <input ng-model="lastname" class="form-control" ng-maxlength="20"  tabindex="2" placeholder="Enter lastname" required />
+      <input ng-model="lastname" class="form-control" ng-maxlength="20"  tabindex="2" placeholder="Enter lastname..." required />
     </label>
   </div>
   <div class="col-2">
     <label>
       Email
-      <input  type="email" class="form-control" ng-model="email"  tabindex="3" placeholder="Enter email" required />
+      <input  type="email" class="form-control" ng-model="email"  tabindex="3" placeholder="Enter email..." required />
     </label>
   </div>
   <div class="col-2">
     <label>
       Password
-      <input type="password" class="form-control" ng-model="password" tabindex="4" placeholder="Enter password" required />
-    </label>
-  </div>
-  <div class="col-2">
-    <label>
-      Confirm Password
-      <input type="password" class="form-control" ng-model="password2" tabindex="5" placeholder="Re-enter password" required />
+      <input type="password" class="form-control" ng-model="password" tabindex="4" placeholder="Enter password..." required />
     </label>
   </div>
   <div>
-    <button type="submit" class="form-control" style="position:relative;width:45%;left:27%;top:27%">Signup</button>
+    <button type="submit" class="form-control" style="position:relative;width: 47%;left: 25%;right: 25%;top:27%">Signup</button>
     <p class="message">Already registered? <a href="/login">Login here</a></p>
   </div>
   </form> 
@@ -122,6 +115,7 @@
   </div>
 </div>
       </div>
+  </div>
   </div>
   <!--SCRIPTS-->
   <script src="/js/dependencies/sails.io.js"></script>
