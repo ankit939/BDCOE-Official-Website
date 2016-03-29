@@ -1,4 +1,5 @@
 /*global angular*/
+/*global Feedback*/
 angular.module('HomeMod',['ngRoute','ngAnimate','toastr'])
 .config( function($routeProvider, $locationProvider) {
   $routeProvider
@@ -30,5 +31,4 @@ angular.module('HomeMod',['ngRoute','ngAnimate','toastr'])
         $http.get('/json/members.json').success(function(data) {
           $scope.members = data;
         });
-      });
-
+})

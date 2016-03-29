@@ -1,8 +1,6 @@
 module.exports = {
 	//Sign User to
 	signup: function(req, res){
-		console.log("Backend Signup");
-
 		var Passwords = require('machinepack-passwords');
 
 		//Encrypt Password

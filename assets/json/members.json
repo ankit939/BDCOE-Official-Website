@@ -1,19 +1,19 @@
 [
   {
     "name": "Satyam Aggrawal",
-    "branch": "IT",
+    "branch": "IT-2",
     "year": "4th year",
     "image": "/images/about/1.jpg"
   },
   {
     "name": "Shrikant Mittal",
-    "branch": "IT",
+    "branch": "IT-2",
     "year": "4th year",
     "image": "/images/about/2.jpg"
   },
   {
     "name": "Shivam Aggrawal",
-    "branch": "IT",
+    "branch": "IT-2",
     "year": "4th year",
     "image": "/images/about/3.jpg"
   },
@@ -102,7 +102,7 @@
   },
   {
     "name": "Raj Kumar Maurya",
-    "branch": "IT",
+    "branch": "IT-2",
     "year": "2nd year",
     "image": "/images/about/13.jpg"
   },

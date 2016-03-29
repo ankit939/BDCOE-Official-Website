@@ -21,6 +21,7 @@
     "include-all": "~0.1.6",
     "machinepack-gravatar": "^1.2.0",
     "machinepack-passwords": "^2.3.0",
+    "nodemailer": "^2.3.0",
     "rc": "1.0.1",
     "sails": "~0.12.1",
     "sails-disk": "~0.10.9",
@@ -29,7 +30,6 @@
   "scripts": {
     "start": "sails lift",
     "debug": "node debug app.js"
-    
   },
   "main": "app.js",
   "repository": {
