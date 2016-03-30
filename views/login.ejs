@@ -3,7 +3,7 @@
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Log In-BDCoE</title>
+  <title>Login-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
@@ -24,7 +24,7 @@
 <div class="preloader_hide">
 
   <!-- PAGE -->
-  <div id="page" style="min-width:900px";>
+  <div id="page">
   
     <!-- HEADER -->
     <header id="navbar">
@@ -41,7 +41,7 @@
           </div><!-- //LOGO -->
           
           <!-- MENU -->
-        <div class="pull-right" style="position: absolute;left: 13%;right: 15%;">
+          <div class="pull-right" style="position: absolute;left: 13%;right: 15%;">
             <nav class="navmenu center" style="min-width: 951px;left: 17%;right: 17%;">
               <ul>
                 <li class="first scroll_btn"><a href="/#/"><span class=" glyphicon glyphicon-home" style="padding-right:3px"></span>Home</a></li>
@@ -49,19 +49,21 @@
                 <li class="scroll_btn"><a href="/#/portfolio"><span class=" glyphicon glyphicon-picture" style="padding-right:3px"></span>Portfolio</a></li>
                 <li class="scroll_btn"><a href="/#/about_us"><span class=" glyphicon glyphicon-tree-deciduous" style="padding-right:3px"></span>About Us</a></li>
                 <li class="scroll_btn"><a href="/#/news"><span class=" glyphicon glyphicon-list-alt" style="padding-right:3px"></span>News</a></li>
-                <li class="scroll_btn last"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
-                <li><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
-                <li><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Sign Up</a></li>
+                <li class="scroll_btn"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
+                <li class="scroll_btn"><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
+                <li class="scroll_btn last"><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Sign Up</a></li>
               </ul>
             </nav>
           </div><!-- //MENU -->
         </div><!-- //MENU BLOCK -->
       </div><!-- //CONTAINER -->
     </header><!-- //HEADER -->
-    <div id="loginbg" style="background-image: url(../images/white.png);">
+    </div>
+    <div id="loginbg" style="background-image: url(../images/white.png);absolute;width: 100%;min-width: 1050px;height: auto;">
+      <div style="min-width: 1050px;width: 100%;position: absolute;top: 128px;">
       <div class="loginformbg">
      <img class="img-circle bdlogo" src="/images/logo.png">
-    <form ng-submit="runLogin()" style="position: absolute;top: 41%;left: 27%;right:27%;width: 48%;">
+    <form ng-submit="runLogin()" style="position: absolute;top: 41%;left: 27%;right:27%;width: 49%;">
       <div class="col-2">
           <label>
             Email
@@ -77,6 +79,7 @@
           <input type="submit" class="form-control" value="login" style="position:relative;width:45%;left:27%;top:27%" required/>
           <p class="message" style="position:relative;top:5px">Not registered? <a href="/signup">Create an account</a></p>
       </form>
+      </div>
       </div>
       <div>
       <img src="/images/corousel.png" class="corouselimg img-responsive">

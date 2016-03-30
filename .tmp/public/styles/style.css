@@ -253,7 +253,7 @@ header {
 }
 .logo a span {
 	display:inline-block;
-	padding-right:18px;
+	padding-right:12px;
 }
 .b1 {font-weight:900;}
 .b2 {font-weight:700;}
@@ -1382,9 +1382,9 @@ ul.project_info li span {color:#979797;}
 .loginformbg{
 	position: absolute;
     background-color: #87CEFA;
-    right: 2%;
+    right: 3%;
     top: 20%;
-    width: 30%;
+    width: 29%;
     height: 500px;
     border-radius: 75px;
 }

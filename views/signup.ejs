@@ -1,9 +1,9 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Sign Up-BDCoE</title>
+  <title>Signup-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
@@ -24,7 +24,7 @@
 <div class="preloader_hide">
 
   <!-- PAGE -->
-  <div id="page" style="min-width:900px">
+  <div id="page">
   
     <!-- HEADER -->
     <header id="navbar">
@@ -49,16 +49,18 @@
                 <li class="scroll_btn"><a href="/#/portfolio"><span class=" glyphicon glyphicon-picture" style="padding-right:3px"></span>Portfolio</a></li>
                 <li class="scroll_btn"><a href="/#/about_us"><span class=" glyphicon glyphicon-tree-deciduous" style="padding-right:3px"></span>About Us</a></li>
                 <li class="scroll_btn"><a href="/#/news"><span class=" glyphicon glyphicon-list-alt" style="padding-right:3px"></span>News</a></li>
-                <li class="scroll_btn last"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
-                <li><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
-                <li><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Sign Up</a></li>
+                <li class="scroll_btn"><a href="/#/contact_us"><span class=" glyphicon glyphicon-phone" style="padding-right:3px"></span>Contact Us</a></li>
+                <li class="scroll_btn"><a href="/login" ><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Login</a></li>
+                <li class="scroll_btn last"><a href="/signup" ><span class=" glyphicon glyphicon-pencil" style="padding-right:3px"></span>Sign Up</a></li>
               </ul>
             </nav>
           </div><!-- //MENU -->
         </div><!-- //MENU BLOCK -->
       </div><!-- //CONTAINER -->
     </header><!-- //HEADER -->
-<div id="loginbg" style="margin-left:0;margin-right:0;background-image: url(../images/white.png);">
+    </div>
+<div id="loginbg" style="background-image: url(../images/white.png);absolute;width: 100%;min-width: 1050px;height: auto;">
+  <div style="min-width: 1050px;width: 100%;position: absolute;top: 128px;">
   <div class="loginformbg">
   <form ng-submit="runSignup()" style="position: absolute;right: 27%;left: 27%;top: 19%;">
   <div class="container" style="width:99%">
@@ -92,6 +94,7 @@
   </div>
   </form> 
   </div>
+</div>
 </div>
 <div>
       <img src="/images/corousel1.png" class="corouselimg img-responsive" style="left: 5.9%;margin-top: 80px;">
