@@ -1387,6 +1387,7 @@ ul.project_info li span {color:#979797;}
     width: 29%;
     height: 500px;
     border-radius: 75px;
+    z-index: 1;
 }
 
 .youdiv{
