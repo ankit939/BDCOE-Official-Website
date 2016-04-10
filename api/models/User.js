@@ -1,5 +1,5 @@
 module.exports = {
-
+	schema:true,
 	attributes: {
 		firstname: {
 			type: 'string',
