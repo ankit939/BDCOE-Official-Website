@@ -1,8 +1,6 @@
 /*global angular*/
 angular.module('SignupMod').controller('SignupCtrl',['$scope', '$http','toastr', function($scope, $http, toastr){
 	$scope.runSignup = function(){
-		console.log("Signing Up"+ $scope.firstname);
-		
 		//Submit To sails Server
 		$http.post('/signup', {
 			firstname: $scope.firstname,

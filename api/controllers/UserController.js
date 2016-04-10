@@ -1,3 +1,4 @@
+/* global User */
 module.exports = {
 	//Sign User to
 	signup: function(req, res){
