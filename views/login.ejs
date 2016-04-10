@@ -22,13 +22,6 @@
 </head>
 <body ng-app="LoginMod" ng-controller="LoginCtrl">
   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=237413036610565";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
   <!-- PRELOADER -->
 <img id="preloader" src="images/preloader.gif" alt="" />
 <!-- //PRELOADER -->
@@ -89,9 +82,6 @@
         </div>
           <input type="submit" class="form-control" value="login" style="position:relative;width:45%;left:27%;top:27%" required/>
           <p class="message" style="position:relative;top:5px">Not registered? <a href="/signup">Create an account</a></p>
-           <p class="message" style="position: relative;bottom: 15px;left: 45%;right: 45%;">OR</p>
-           <label style="position: relative;bottom: 37px;left: 15%;right: 21%;">Login with Facebook</label>
-          <div class="fb-login-button" style="position: absolute;bottom: 17px;left: 30%;right: -29%;" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
       </form>
       </div>
       </div>
