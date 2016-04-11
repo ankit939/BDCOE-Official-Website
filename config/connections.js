@@ -63,7 +63,6 @@ module.exports.connections = {
     user: 'ankit',
     password: 'ankitsakshi',
     database: 'bdcoe',
-    schema: true
   },
 
   /***************************************************************************
