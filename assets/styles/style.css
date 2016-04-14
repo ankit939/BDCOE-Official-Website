@@ -261,9 +261,6 @@ header {
 .b4 {font-weight:300;}
 .b5 {font-weight:100;}
 
-
-
-
 /* __________ Menu __________ */
 .menu_block {
 	position:fixed;
@@ -1408,3 +1405,5 @@ ul.project_info li span {color:#979797;}
     border-radius: 25px;
     background-color: black;
 }
+
+

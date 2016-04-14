@@ -38,7 +38,9 @@ module.exports.routes = {
   'POST /signup': 'UserController.signup',
   'PUT /login': 'UserController.login',
   'GET /getuser': 'DashController.getUser',
-  'GET /logout' : 'UserController.logout'
+  'GET /logout' : 'UserController.logout',
+  'POST /auth/facebook': 'AuthController.facebook',
+  'POST /auth/fbcallback/:id': 'AuthController.facebookcallback'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -16,12 +16,14 @@ angular.module('SignupMod').controller('SignupCtrl',['$scope', '$http','toastr',
 				$scope.lastname = "";
 				$scope.email = "";
 				$scope.password = "";
+				return;
 		})
 		.catch(function onError(err){
 			toastr.error('Already Registered','Error', {
-					closeButton:true
+					close Button:true
 				})
 			console.log('Error: ' + err );
+			return;
 		})
 	}
 }])
