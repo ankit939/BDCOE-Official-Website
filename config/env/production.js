@@ -31,7 +31,7 @@ module.exports = {
   /***************************************************************************
    * Set the log level in production environment to "silent"                 *
    ***************************************************************************/
-
+  hookTimeout: 40000,
    log: {
      level: "silent"
    },
