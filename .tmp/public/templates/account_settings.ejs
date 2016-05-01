@@ -1,0 +1,75 @@
+ <script type="text/ng-template" id="modal.html">
+        <div class="modal-header">
+          <h4 class="modal-title" style+"font-size: larger;"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit your Account Settings</h4></div>
+          <div class="modal-body">
+          <ng-form name="nameDialog" novalidate role="form">
+            <div style="position:relative;width:50%">
+              <p> To switch to other email. Enter a valid email address here...</p>
+              <label class="control-label" for="course">New Email:</label>
+              <input type="email" class="form-control" name="newemail" id="username" ng-model="newemail" ng-keyup="hitEnter($event)" style="width: 90%;" required><br>
+              <p> To change your password. Enter your old password here...</p>
+              <label class="control-label" for="course">Old Password</label>
+              <input type="password" class="form-control" name="oldpassword" id="username" ng-model="oldpassword" ng-keyup="hitEnter($event)" style="width: 90%;" required><br>
+              <p>Enter your new password here...</p>
+              <label class="control-label" for="course">New Password</label>
+              <input type="password" class="form-control" name="oldpassword" id="username" ng-model="newpassword" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              </div>
+              <div style="width: 1px;height: 78%;position: absolute;top: 8%;left: 48%;right: 52%;background-color: #D3D3D3;"></div> 
+
+              <div style="position: absolute;left: 52%;top: 12%;width: 46%;">
+                <img ng-src="{{user.gravatarUrl}}" alt="fwffwfw" style="position: absolute;margin-left: 31%;margin-top: 0;height: auto;width: 33%;border-radius: 18px;">
+                <p class="message" style="position:absolute;top: 173px;left: 44px;">To add/change your profile pic, go to<a href="https://en.gravatar.com" target="_blank">&nbsp;en.gravatar.com</a></p>
+              </div>
+              <button type="button" class="btn btn-default" ng-click="cancel()" style="position: relative;left: 72%;height: 53px;    width: 13%;bottom: 3.5%;">Cancel</button>
+              <button type="button" class="btn btn-primary" ng-click="save()" ng-disabled="(nameDialog.$dirty && nameDialog.$invalid) || nameDialog.$pristine" style="position: relative;left:73%;height: 53px;width: 13%;bottom: 3%;">Save</button>
+    </script>
+    <button type="button" class="btn btn-default hvr-buzz-out" ng-click="open('lg')" style="position:absolute;left:47.5%;right:49.5%;bottom: 9%;">Edit your Account Settings!</button>
+    </button>
+<li id="profile" class="ember-view list-group-item" style="position: absolute;left: 44%;right: 29.1%;top: 7%;border-radius: 25px;box-shadow: 22px 22px 5px #888888;"><div class="panel-section" style="text-align: center;">
+  <div class="panel-description">
+      <div class="panel-details">
+        Your email address is your identity which is used to log in.
+      </div>
+  </div><br>
+  <div>
+          <div>
+    <label>Profile Pic</label><br>
+      <img class="img-circle" ng-src="{{user.gravatarUrl}}" height="48" width="48">
+    </div><br>
+    <div class="profile edit-first">
+      <div class="edit-profile-email">
+    <div class="form-group">
+      <label for="new-e-mail">Email Address</label>
+      <div class="ember-view"><div class="inline-edit">
+      <span class="inline-edit_label ">
+        {{user.email}}
+      </span>
+    </div>
+</div>
+<!---->    </div>
+  </form>
+  
+<span><!---->
+<!----></span></div>
+    <div class="form-group">
+      <label for="name">Name</label><br>
+      <span class="inline-edit_label ">{{user.firstname}} {{user.lastname}}</span><br>
+      <span><!---->
+<!----></span></div>
+    <div class="form-group">
+      <label for="name">Password</label>
+      <div class="inline-edit">
+      <span class="inline-edit_label ">*******************</span>
+    </div><br>
+    <div class="account-close">
+<span>  <button class="btn btn-danger" style="color: white;text-transform: none;border-radius: 19px;padding: 11px 11px 11px;">
+    Delete this Account
+  </button>
+
+<!----></span></div>
+    </div>
+</div>
+
+  </div>
+</div>
+</li>
