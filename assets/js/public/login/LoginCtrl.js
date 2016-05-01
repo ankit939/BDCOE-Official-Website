@@ -12,8 +12,6 @@ angular.module('LoginMod').controller('LoginCtrl',['$scope', '$http','toastr', f
 				toastr.error('Invalid Credentials','Error', {
 					closeButton:true
 				})
-				$scope.email = "";
-				$scope.password = "";
 				return;	
 			}
 			toastr.error('An error has occured, please try again later', 'Error', {

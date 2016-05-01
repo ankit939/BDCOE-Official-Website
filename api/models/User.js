@@ -1,4 +1,5 @@
 module.exports = {
+
 	attributes: {
 		firstname: {
 			type: 'string',

@@ -1,4 +1,3 @@
-/* global User */
 module.exports = {
 	//Sign User to
 	signup: function(req, res){
@@ -36,7 +35,6 @@ module.exports = {
 							}
 							
 							//SESSION VAR
-							console.log('User Added');
 							return res.json({
 								id: newUser.id
 							});
@@ -72,7 +70,6 @@ module.exports = {
 				},
 				success: function(){
 					req.session.me = user.id;
-					console.log('SUCCESS');
 					return res.ok();
 				}
 			})

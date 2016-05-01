@@ -1,3 +1,92 @@
-  <div class="newsdiv" style="position: absolute;left: 40%;right:auto;min-width: 460px;">
-    <p class="news">Welcome {{user.firstname}}</p>
-  </div>
+    <script>
+              $(function() {
+                $('#search').on('keyup', function() {
+                  var pattern = $(this).val();
+                  $('.searchable-container .items').hide();
+                  $('.searchable-container .items').filter(function() {
+                  return $(this).text().match(new RegExp(pattern, 'i'));
+                  }).show();
+                });
+              });
+              </script>
+    <script type="text/ng-template" id="modal.html">
+        <div class="modal-header">
+          <h4 class="modal-title" style+"font-size: larger;"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit your Profile</h4></div>
+          <div class="modal-body">
+          <form ng-submit="profileEdit()">
+            <div style="position:relative;width:50%">
+              <label class="control-label" for="course">Student No:</label>
+              <input type="text" class="form-control" name="studno" id="username" ng-model="studno" placeholder="{{profile.studno}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <label class="control-label" for="course">University Roll No:</label>
+              <input type="text" class="form-control" name="username" id="username" ng-model="univno" placeholder="{{profile.univno}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <label class="control-label" for="course">Branch:</label>
+              <input type="text" class="form-control" name="branch" id="username" ng-model="branch" placeholder="{{profile.branch}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <label class="control-label" for="course">Section:</label>
+              <input type="text" class="form-control" name="section" id="username" ng-model="section" placeholder="{{profile.section}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <label class="control-label" for="course">Year:</label>
+              <input type="text" class="form-control" name="year" id="username" ng-model="year" placeholder="{{profile.year}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <label class="control-label" for="course">Mobile No:</label>
+              <input type="text" class="form-control" name="mobileno" id="username" ng-model="mobileno" placeholder="{{profile.mobileno}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              </div>
+              <div style="width: 1px;height: 78%;position: absolute;top: 8%;left: 48%;right: 52%;background-color: #D3D3D3;"></div> 
+                <div style="position: absolute;left: 52%;top: 12%;width: 46%;">
+                  <label class="control-label" for="course" style="position:absolute;">Interested In</label>
+                  <div class="row">
+                    <div class="form-group">
+                      <div class="searchable-container">
+                        <div ng-repeat="interest in interests">
+                          <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3"  style="width: 50%;">
+                            <div class="info-block block-info clearfix">
+                              <div class="square-box pull-left">
+                                <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                              </div>
+                              <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                                <label class="btn btn-default" style="padding:0">
+                                <div class="bizcontent">
+                                  <input type="checkbox" name="intlist" autocomplete="off" value="">
+                                  <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                  <h5>{{interest}}</h5>
+                                </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <button type="button" class="btn btn-default" ng-click="cancel()" style="position: relative;left: 72%;height: 53px;    width: 13%;bottom: 3.5%;">Cancel</button>
+              <button type="submit" class="btn btn-primary" ng-click="cancel()" ng-disabled="(nameDialog.$dirty && nameDialog.$invalid) || nameDialog.$pristine" style="position: relative;left:73%;height: 53px;width: 13%;bottom: 3%;">Save</button>
+            </form>
+    </script>
+    <button type="button" class="btn btn-default hvr-buzz-out" ng-click="open('lg')" style="position:absolute;left:49.7%;right:49.5%;bottom: 14%;">Edit your Profile!</button>
+    </button>
+    <div class="ng-scope ember-view list-group-item " style="position: absolute;left: 21%;top: 17%;border-radius: 25px;box-shadow: 22px 22px 5px #888888;">
+    <br>
+    <label style="font-size: 138%;position: absolute;">PERSONAL DETAILS</label>
+    <hr width="300px" style="position: relative;border-color: #666;border-width: 2px;top: 2px;"></hr><br>
+    <label>Student Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.firstname}} {{user.lastname}}<br>
+    <label>Student No:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.studno}}<br>
+    <label>University Roll No:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.univno}}<br>
+    <label>Branch:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.branch}}<br>
+    <label>Section:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.section}}<br>
+    <label>Year:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.year}}<br>
+    <label>Mobile No:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{profile.mobileno}}<br>
+    <label>Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{user.email}}<br>
+    </div>
+    <div class="ng-scope ember-view list-group-item" style="position: absolute;right: 9%;top: 17%;border-radius: 25px;box-shadow: 22px 22px 5px #888888;">
+    <br>
+    <label style="font-size: 138%;position: absolute;">INTERESTED IN</label>
+    <hr width="300px" style="position: relative;border-color: #666;border-width: 2px;top: 2px;"></hr><br>
+    <label>Web Development</label><span class="glyphicon glyphicon-remove" style="left:52.5%;"></span><br>
+    <label>Software Development</label><span class="glyphicon glyphicon-remove" style="left:43.5%"></span><br>
+    <label>Android App Development</label><span class="glyphicon glyphicon-remove" style="left:37%"></span><br>
+    <label>Data Analytics</label><span class="glyphicon glyphicon-remove" style="left:60%"></span><br>
+    <label>Designing</label><span class="glyphicon glyphicon-remove" style="left:68.5%"></span><br>
+    <label>Cloud Computing</label><span class="glyphicon glyphicon-remove" style="left:54.5%"></span><br>
+    <label>Artificial Intelligence</label><span class="glyphicon glyphicon-remove" style="left:47.5%"></span><br>
+    <label>Others</label><span class="glyphicon glyphicon-remove" style="left:75%"></span><br>
+    </div>
+
+  

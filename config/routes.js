@@ -19,7 +19,6 @@
  * For more information on configuring custom routes, check out:
  * https://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
-
 module.exports.routes = {
 
   /***************************************************************************
@@ -39,8 +38,9 @@ module.exports.routes = {
   'PUT /login': 'UserController.login',
   'GET /getuser': 'DashController.getUser',
   'GET /logout' : 'UserController.logout',
-  'POST /auth/facebook': 'AuthController.facebook',
-  'POST /auth/fbcallback/:id': 'AuthController.facebookcallback'
+  'POST /createprofile': 'ProfileController.createProfile',
+  'GET /getprofile': 'ProfileController.getProfile'
+  
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

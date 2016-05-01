@@ -12,18 +12,11 @@ angular.module('SignupMod').controller('SignupCtrl',['$scope', '$http','toastr',
 			toastr.success('Now login to your account','Registered Successfully', {
 					closeButton:true
 				})
-				$scope.firstname = "";
-				$scope.lastname = "";
-				$scope.email = "";
-				$scope.password = "";
-				return;
 		})
 		.catch(function onError(err){
 			toastr.error('Already Registered','Error', {
-					close Button:true
+					closeButton:true
 				})
-			console.log('Error: ' + err );
-			return;
 		})
 	}
 }])

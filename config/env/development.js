@@ -12,7 +12,7 @@
 
 module.exports = {
   port: process.env.PORT,
-  host: process.env.IP
+  host: process.env.IP,
   /***************************************************************************
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
@@ -21,5 +21,12 @@ module.exports = {
   // models: {
   //   connection: 'someMongodbServer'
   // }
-
+  models: {
+    connection: 'myMongo'
+  },
+  fb: {
+    appID: "237413036610565",
+    appSecret: "745bb373863eac82e5caf1c24b385828",
+    callbackURL: "http://www.bdcoe.co.in/auth/facebook/callback"
+   }
 };

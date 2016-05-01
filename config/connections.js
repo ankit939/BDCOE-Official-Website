@@ -62,7 +62,7 @@ module.exports.connections = {
     port: 25409,
     user: 'ankit',
     password: 'ankitsakshi',
-    database: 'bdcoe',
+    database: 'bdcoe'
   },
 
   /***************************************************************************

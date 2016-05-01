@@ -3,15 +3,15 @@
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-   <!--FAVICON -->
-  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
-  <title>BDCoE-Login</title>
+  <title>Login-BDCoE</title>
   <!--STYLES-->
   <link rel="stylesheet" href="/styles/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/font-awesome.min.css">
   <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/angular-material.min.css">
   <link rel="stylesheet" href="/styles/angular-toastr.css">
   <link rel="stylesheet" href="/styles/animate.css">
+  <link rel="stylesheet" href="/styles/dialogs.css">
   <link rel="stylesheet" href="/styles/font-awesomenew.css">
   <link rel="stylesheet" href="/styles/googleapis.css">
   <link rel="stylesheet" href="/styles/hover.css">
@@ -20,7 +20,6 @@
   <!--STYLES END-->
 </head>
 <body ng-app="LoginMod" ng-controller="LoginCtrl">
-  <div id="fb-root"></div>
   <!-- PRELOADER -->
 <img id="preloader" src="images/preloader.gif" alt="" />
 <!-- //PRELOADER -->
@@ -39,8 +38,8 @@
         <div class="container clearfix" style="min-width: 1050px;">
           
           <!-- LOGO -->
-          <div class="logo pull-left">
-            <a href="/#/" ><span class="b1">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
+          <div class="logo pull-left" style="cursor:default;height: 71px;padding-top: 10px;">
+            <a class="hvr-underline-from-center" style="height: 54px;"  href="/#/"><span class="b1" style="padding-left: 11px;">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
           </div><!-- //LOGO -->
           
           <!-- MENU -->
@@ -115,11 +114,16 @@
   <script src="/js/dependencies/bootstrap.min.js"></script>
   <script src="/js/dependencies/angular.js"></script>
   <script src="/js/dependencies/angular-animate.js"></script>
+  <script src="/js/dependencies/angular-aria.min.js"></script>
+  <script src="/js/dependencies/angular-material.min.js"></script>
+  <script src="/js/dependencies/angular-messages.min.js"></script>
   <script src="/js/dependencies/angular-resource.js"></script>
   <script src="/js/dependencies/angular-route.js"></script>
   <script src="/js/dependencies/angular-toastr.js"></script>
   <script src="/js/dependencies/angular-toastr.tpls.js"></script>
   <script src="/js/dependencies/animate.js"></script>
+  <script src="/js/dependencies/dialogs-default-translations.js"></script>
+  <script src="/js/dependencies/dialogs.js"></script>
   <script src="/js/dependencies/jquery.BlackAndWhite.js"></script>
   <script src="/js/dependencies/jquery.flexslider-min.js"></script>
   <script src="/js/dependencies/jquery.nicescroll.min.js"></script>
@@ -127,6 +131,7 @@
   <script src="/js/dependencies/members.js"></script>
   <script src="/js/dependencies/owl.carousel.js"></script>
   <script src="/js/dependencies/superfish.min.js"></script>
+  <script src="/js/dependencies/ui-bootstrap-tpls-1.3.2.js"></script>
   <script src="/js/dependencies/wow.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/public/homepage/HomeMod.js"></script>

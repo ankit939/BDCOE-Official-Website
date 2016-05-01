@@ -1,4 +1,4 @@
-angular.module('DashMod', ['ngRoute','ngAnimate'])
+angular.module('DashMod', ['ngRoute','ngAnimate','ui.bootstrap','toastr'])
 .config(function($routeProvider, $locationProvider) {
   $routeProvider
    .when('/', {

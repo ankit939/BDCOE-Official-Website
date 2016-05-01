@@ -34,6 +34,12 @@ module.exports = {
 
    log: {
      level: "silent"
+   },
+
+   fb: {
+    appID: "237413036610565",
+    appSecret: "745bb373863eac82e5caf1c24b385828",
+    callbackURL: "http://www.bdcoe.co.in/auth/facebook/callback"
    }
 
 };
