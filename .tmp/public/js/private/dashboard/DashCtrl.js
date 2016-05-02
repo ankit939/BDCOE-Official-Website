@@ -110,23 +110,20 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
                 others: $scope.others
         })
     .then(function onSuccess(response){
-      toastr.success('All the details are saved...','Profile is Updated!', {
+      toastr.success('All the details are saved.','Profile is Updated!', {
           closeButton:true
-        })
+        });
+        $uibModalInstance.dismiss('cancel');
+         window.location.reload(true);
     })
     .catch(function onError(err){
-      toastr.error('There is some error, try after some time...','Error', {
+      toastr.error('There is some error, try after some time.','Error', {
           closeButton:true
         })
     })
   }
 
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function (profile) {
+  $scope.cancel = function () {
     $uibModalInstance.dismiss('cancel');
-    window.location.href('http://www.bdcoe.co.in/dashboard#/');
   };
 });
