@@ -87,7 +87,7 @@ module.exports = {
 
 			req.session.me = null;
 
-			return res.redirect('/');
+			return res.redirect('/login');
 		})
 	}
 };

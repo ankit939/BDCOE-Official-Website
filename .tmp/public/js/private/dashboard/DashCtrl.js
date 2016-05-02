@@ -117,7 +117,7 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
          window.location.reload(true);
     })
     .catch(function onError(err){
-      toastr.error('There is some error, try after some time.','Error', {
+      toastr.error('There is some error, try after some time.','Error!', {
           closeButton:true
         })
     })
