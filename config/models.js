@@ -27,6 +27,6 @@ module.exports.models = {
   * See https://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  migrate: 'safe'
+  //migrate: 'alter'
 
 };
