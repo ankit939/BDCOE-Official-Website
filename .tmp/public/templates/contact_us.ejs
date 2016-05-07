@@ -2,7 +2,7 @@
   <div class="blueheading">
     <h1 class="heading">Contact Us</h1>
   </div>
-  <div class="row contactrow">
+  <div class="row contactrow" data-wow-delay=".3s">
   		<a href="https://www.facebook.com/bigdatacoe/?fref=ts" target="_blank" class="contactimg hvr-buzz-out" style="left: 63%;border-radius: 100px;background-color:white;cursor:pointer;" target="_blank" title="Official Facebook Page"><img src="/images/icons/facebook.png"></a>
   		<a href="https://twitter.com/bdcoe2015" target="_blank" class="contactimg hvr-buzz-out" style="left: 42%;border-radius: 100px;background-color:white;cursor:pointer;"><img src="/images/icons/twitter.png" title="Official Twitter Handler"></a>
   		<a class="contactimg hvr-buzz-out" style="left: 20%;border-radius: 100px;background-color:white;"><img src="/images/icons/phone.png" title="+91 90 45 168906"></a>
@@ -11,11 +11,11 @@
   <div class="blueheading1">
     <h1 class="heading1">Location</h1>
   </div>
-  <div class="memberdiv" style="position: absolute;top: 18.1%;left: 8%;width: 29%;padding:2%">
+  <div class="memberdiv" data-wow-delay=".3s" style="position: absolute;top: 18.1%;left: 8%;width: 29%;padding:2%">
   	<label for="#add" style="position: absolute;top: 9%;">Address:</label>
   	<p id="#add" style="position: absolute;top: 30%;">P.O. Adhyatmik Nagar Adhyatmik Nagar, Hapur Bypass, Bulandshahr Road Industrial Area, Ghaziabad, Uttar Pradesh 201009</p>
   </div>
-  <div id="map" style="position: absolute;top: 39%;left: 8%;border-radius:25px">
+  <div data-wow-delay=".3s" id="map" style="position: absolute;top: 39%;left: 8%;border-radius:25px">
   <script>
   function initMap() {
   	var mapDiv = document.getElementById('map');
@@ -31,8 +31,8 @@
 <div class="blueheading" style="top: 41%;">
     <h1 class="heading">Give Us Feedback</h1>
   </div>
-  <div class="feedback">
-   <form ng-submit="" class="feedform">
+  <div class="feedback" data-wow-delay=".3s">
+   <form ng-submit="" class="feedform" ng-submit="runfeedback()">
   	<div class="col-2">
           <label for="#em">
             Your Email

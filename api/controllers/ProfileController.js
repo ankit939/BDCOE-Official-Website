@@ -2,6 +2,7 @@ module.exports = {
 	createProfile: function(req, res){
 						// Create User
 						Profile.create({
+							email: req.param('email'),
 							studno: req.param('studno'),
                 			univno: req.param('univno'),
                 			branch: req.param('branch'),
@@ -28,7 +29,7 @@ module.exports = {
 						})
 					},
 	getProfile: function(req, res){
-		Profile.findOne({email: req.session.me.email}, function(err, profile){
+		Profile.find({email: req.session.me.email}, function(err, profile){
 			if(err){
 				res.negotiate(err);
 			}

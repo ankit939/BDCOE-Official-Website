@@ -8,17 +8,7 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
       console.log(err);
     })
   };
-  function getProfile(){
-    $http.get('/getprofile')
-    .then(function onSuccess(profile){
-      $scope.profile = profile.data;
-    })
-    .catch(function onError(err){
-      console.log(err);
-    })
-  };
-   getUser();
-   getProfile();
+  getUser();
     //Modal Controls
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -93,7 +83,6 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
         yr = yr + 'th year';
     //Submit To sails Server
         $http.post('/createprofile', {
-                email: $scope.user.email,
                 studno: $scope.studno,
                 univno: $scope.univno,
                 branch: $scope.branch,
@@ -114,7 +103,7 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
           closeButton:true
         });
         $uibModalInstance.dismiss('cancel');
-         window.location.reload(true);
+        window.location.reload(true);
     })
     .catch(function onError(err){
       toastr.error('There is some error, try after some time.','Error!', {

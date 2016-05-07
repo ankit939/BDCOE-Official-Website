@@ -38,8 +38,7 @@ module.exports.routes = {
   'PUT /login': 'UserController.login',
   'GET /getuser': 'DashController.getUser',
   'GET /logout' : 'UserController.logout',
-  'POST /createprofile': 'ProfileController.createProfile',
-  'GET /getprofile': 'ProfileController.getProfile'
+  'POST /createprofile': 'DashController.createProfile',
   
   /***************************************************************************
   *                                                                          *

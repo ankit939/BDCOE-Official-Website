@@ -1,16 +1,15 @@
 module.exports = {
 
-    sendInviteEmail: function(options) {
+    sendFeedbackEmail: function(options) {
 
         var opts = {"type":"messages","call":"send","message":
             {
-                "subject": "YourIn!",
-                "from_email": "info@balderdash.co",
-                "from_name": "AmazingStartupApp",
+                "from_email": options.email,
+                "feedback" : options.feedback,
                 "to":[
-                    {"email": options.email, "name": options.name}
+                    {"email": "ankitkumarsharma939@gmail.com"}
                 ],
-                "text": "Dear "+options.name+",\nYou're in the Beta! Click <insert link> to verify your account"
+                "text": "You have recieved a feedback message from www.bdcoe.co.in.\n"+"The email of sender is:\n"+ options.email +"The feedback message is:\n"+ options.feedback
             }
         };
 
