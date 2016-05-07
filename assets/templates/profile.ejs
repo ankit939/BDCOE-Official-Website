@@ -24,7 +24,7 @@
               <label class="control-label" for="course">Section:</label>
               <input type="text" class="form-control" name="section" id="username" ng-model="section" placeholder="{{user.section}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
               <label class="control-label" for="course">Year:</label>
-              <input type="text" class="form-control" name="year" id="username" ng-model="year" placeholder="{{user.year}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
+              <input type="number" min="1" max="4" class="form-control" name="year" id="username" ng-model="year" placeholder="{{user.year}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
               <label class="control-label" for="course">Mobile No:</label>
               <input type="text" class="form-control" name="mobileno" id="username" ng-model="mobileno" placeholder="{{user.mobileno}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
               </div>
