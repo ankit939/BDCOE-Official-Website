@@ -29,8 +29,8 @@
               <input type="text" class="form-control" name="mobileno" id="username" ng-model="mobileno" placeholder="{{user.mobileno}}" ng-keyup="hitEnter($event)" style="width: 90%;" required>
               </div>
               <div style="width: 1px;height: 78%;position: absolute;top: 8%;left: 48%;right: 52%;background-color: #D3D3D3;"></div> 
-                <div style="position: absolute;left: 52%;top: 12%;width: 46%;">
-                  <label class="control-label" for="course" style="position:absolute;">Interested In</label>
+                <div style="position: absolute;left: 49.5%;top: 9%;width: 46%;">
+                <label style="position: absolute;font-size: initial;">Interested In</label>
                   <div class="row">
                     <div class="form-group">
                       <div class="searchable-container">
@@ -38,14 +38,13 @@
                           <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3"  style="width: 50%;">
                             <div class="info-block block-info clearfix">
                               <div class="square-box pull-left">
-                                <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
                               </div>
                               <div data-toggle="buttons" class="btn-group bizmoduleselect">
                                 <label class="btn btn-default" style="padding:0">
                                 <div class="bizcontent">
-                                  <input type="checkbox" name="intlist" autocomplete="off" value="">
-                                  <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                  <h5>{{interest}}</h5>
+                                  <md-switch class="md-primary" md-no-ink="" aria-label="Switch No Ink" ng-model="interest.value">
+                                    {{interest.name}}
+                                  </md-switch>
                                 </div>
                                 </label>
                               </div>
@@ -79,14 +78,14 @@
     <br>
     <label style="font-size: 138%;position: absolute;">INTERESTED IN</label>
     <hr width="300px" style="position: relative;border-color: #666;border-width: 2px;top: 2px;"></hr><br>
-    <label>Web Development</label><span class="glyphicon glyphicon-remove" style="left:52.5%;"></span><br>
-    <label>Software Development</label><span class="glyphicon glyphicon-remove" style="left:43.5%"></span><br>
-    <label>Android App Development</label><span class="glyphicon glyphicon-remove" style="left:37%"></span><br>
-    <label>Data Analytics</label><span class="glyphicon glyphicon-remove" style="left:60%"></span><br>
-    <label>Designing</label><span class="glyphicon glyphicon-remove" style="left:68.5%"></span><br>
-    <label>Cloud Computing</label><span class="glyphicon glyphicon-remove" style="left:54.5%"></span><br>
-    <label>Artificial Intelligence</label><span class="glyphicon glyphicon-remove" style="left:47.5%"></span><br>
-    <label>Others</label><span class="glyphicon glyphicon-remove" style="left:75%"></span><br>
+    <label>Software Development</label><span style="position:absolute;left: 78.5%;">{{(user.softdev === true)? 'Yes' : 'No' }}</span><br>
+    <label>Web Development</label><span style="position:absolute;left: 78.5%;">{{(user.webdev === true)? 'Yes' : 'No' }}</span><br>
+    <label>Android App Development</label><span style="position:absolute;left: 79%;">{{(user.androiddev === true)? 'Yes' : 'No' }}</span><br>
+    <label>Data Analytics</label><span style="position:absolute;left: 78%;">{{(user.dataanalytics === true)? 'Yes' : 'No' }}</span><br>
+    <label>Designing</label><span style="position:absolute;left: 78.5%;">{{(user.designing === true)? 'Yes' : 'No' }}</span><br>
+    <label>Cloud Computing</label><span  style="position:absolute;left: 78.5%;">{{(user.cloudcomp === true)? 'Yes' : 'No' }}</span><br>
+    <label>Artificial Intelligence</label><span style="position:absolute;left: 77.5%;">{{(user.artificialint === true)? 'Yes' : 'No' }}</span><br>
+    <label>Others</label><span style="position:absolute;left: 78.5%;">{{(user.others === true)? 'Yes' : 'No' }}</span><br>
     </div>
 
   

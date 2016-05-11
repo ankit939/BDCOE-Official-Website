@@ -1428,12 +1428,46 @@ ul.project_info li span {color:#979797;}
 .searchable-container label.btn-default.active{background-color:#007ba7;color:#FFF}
 .searchable-container label.btn-default{width:90%;border:1px solid #efefef;margin:5px; box-shadow:5px 8px 8px 0 #ccc;}
 .searchable-container label .bizcontent{width:100%;}
-.searchable-container .btn-group{width:90%}
+.searchable-container .btn-group{width:123%}
 .searchable-container .btn span.glyphicon{
     opacity: 0;
 }
 .searchable-container .btn.active span.glyphicon {
     opacity: 1;
+}
+
+.regstudentsimg{
+	position: relative;
+    width: 17.3%;
+    height: 100%;
+    border-radius: 22px 0px 0px 0px;
+    overflow: hidden;
+    left: -3.2%;
+}
+
+.regstudentsdiv{
+	position: relative;
+    height: 110px;
+    width: 49%;
+    border-radius: 25px;
+    border: 3px solid #87CEFA;
+    min-width: 502px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    margin: 0 1% 1% 0;
+    background-color: white;
+    top:5px;
+    left: 5px;
+    right: 5px;
+}
+
+.regstudentsdesc{
+	position: relative;
+    left: 18%;
+    width: 82%;
+    height: 90%;
+    bottom: 95%;
 }
 
 

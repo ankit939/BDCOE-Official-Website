@@ -33,12 +33,18 @@ module.exports.routes = {
   'GET /':{view: 'homepage'},
   'GET /login':{view: 'login'},
   'GET /signup':{view: 'signup'},
+  'GET /admin':{view: 'admin'},
+  'GET /admin':'AdminController.checkAdmin',
   'GET /dashboard':'DashController.checkUser',
   'POST /signup': 'UserController.signup',
   'PUT /login': 'UserController.login',
+  'PUT /adminlogin': 'AdminController.login',
   'GET /getuser': 'DashController.getUser',
+  'GET /getallusers': 'AdminController.getAllUsers',
   'GET /logout' : 'UserController.logout',
+  'GET /adminlogout' : 'AdminController.logout',
   'POST /createprofile': 'DashController.createProfile',
+  'POST /updateAccount': 'DashController.account',
   
   /***************************************************************************
   *                                                                          *

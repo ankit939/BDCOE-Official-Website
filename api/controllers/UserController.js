@@ -32,14 +32,14 @@ module.exports = {
                 			section: req.param('section'),
                 			year: req.param('year'),
                 			mobileno: req.param('mobileno'),
-                			softdev: req.param('softdev'),
-                			webdev: req.param('webdev'),
-                			androiddev: req.param('androiddev'),
-                			dataanalytics: req.param('dataanalytics'),
-                			designing: req.param('designing'),
-                			cloudcomp: req.param('cloudcomp'),
-                			artificialint: req.param('artificialint'),
-                			others: req.param('others'),
+                			softdev: false,
+                			webdev: false,
+                			androiddev: false,
+                			dataanalytics: false,
+                			designing: false,
+                			cloudcomp: false,
+                			artificialint: false,
+                			others: false,
 							lastLoggedIn: new Date(),
 							gravatarUrl: gravatarUrl
 						}, function userCreated(err, newUser){
@@ -75,11 +75,9 @@ module.exports = {
 				encryptedPassword: user.password
 			}).exec({
 				error: function(err){
-					console.log('Password Error');
 					return res.negotiate(err);
 				},
 				incorrect: function(){
-					console.log('Password incorrect');
 					return res.notFound();
 				},
 				success: function(){

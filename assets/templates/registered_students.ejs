@@ -1,0 +1,16 @@
+ <div class="wow fadeIn" data-wow-delay=".3s">
+     <div class="newsdiv" style="position: absolute;background-color:#87CEFA;height: 77px;right: 37%;left: 37%;top: 25px;min-width: 556px;width: 40%;">
+  	<p style="color:white;position: relative;font-size: 60px;top: 32%;left: 2%;line-height:14px;font-weight:300px">Registered Students</p><br>
+  </div>
+  <div class="row" style="position: absolute;top: 113px;left: 21%;width: 75%;height: 473px;overflow: overlay;">
+  	<div ng-repeat="student in students" class="regstudentsdiv">
+  		<div class="regstudentsimg"><img src="{{student.gravatarUrl}}"></div>
+  		<div class="regstudentsdesc">
+  		    <label>Name:&nbsp{{student.firstname}}&nbsp{{student.lastname}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStudent No:&nbsp{{student.studno}}</label><br>
+  			<label>University Roll No:&nbsp{{student.univno}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSection:&nbsp&nbsp&nbsp{{student.section}}</label><br>
+  			<label>Branch:&nbsp{{student.branch}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYear:&nbsp{{student.year}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMobile No:&nbsp{{student.mobileno}}</label><br>
+  			<label>Email:&nbsp{{student.email}}</label>
+  		</div>
+    </div>
+  </div>
+  </div>

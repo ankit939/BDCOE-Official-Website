@@ -9,6 +9,7 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
     })
   };
   getUser();
+  
     //Modal Controls
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -43,31 +44,38 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
   $scope.selected = {
     item: $scope.items[0]
   };
-
+  
   $scope.interests = [
-    'Software Development', 
-    'Web Development',
-     'Android App Development',
-     'Data Analytics',
-     'Designing',
-     'Cloud Computing',
-     'Artificial Intelligence',
-     'Others'
+    {
+    name: 'Software Development',
+    value: $scope.user.softdev
+    }, 
+    {
+      name: 'Web Development',
+      value: $scope.user.webdev},
+     {
+       name: 'Android Development',
+       value: $scope.user.androiddev},
+     {
+       name: 'Data Analytics',
+       value: $scope.user.dataanalytics},
+     {
+       name: 'Designing',
+       value: $scope.user.designing},
+     { 
+       name: 'Cloud Computing',
+       value: $scope.user.cloudcomp},
+     {
+       name: 'Artificial Intelligence',
+       value: $scope.user.artificialint},
+     {
+       name: 'Others',
+       value: $scope.user.others
+     }
     ];
-
-    $scope.intlist = [
-      'false',
-      'false',
-      'false',
-      'true',
-      'false',
-      'false',
-      'false',
-      'false',
-    ]
-
+    
     $scope.profileEdit = function(){
-      var yr = $scope.year;
+     var yr = $scope.year;
       if(yr === '1'){
         yr = yr + 'st year';
       }
@@ -81,7 +89,8 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
       }
       else
         yr = yr + 'th year';
-    //Submit To sails Server
+      
+    //Submit To Sails Server
         $http.post('/createprofile', {
                 studno: $scope.studno,
                 univno: $scope.univno,
@@ -89,14 +98,14 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
                 section: $scope.section,
                 year: yr,
                 mobileno: $scope.mobileno,
-                softdev: $scope.softdev,
-                webdev: $scope.webdev,
-                androiddev: $scope.androiddev,
-                dataanalytics: $scope.dataanalytics,
-                designing: $scope.designing,
-                cloudcomp: $scope.cloudcomp,
-                artificialint: $scope.artificialint,
-                others: $scope.others
+                softdev: $scope.interests[0].value,
+                webdev: $scope.interests[1].value,
+                androiddev: $scope.interests[2].value,
+                dataanalytics: $scope.interests[3].value,
+                designing: $scope.interests[4].value,
+                cloudcomp: $scope.interests[5].value,
+                artificialint: $scope.interests[6].value,
+                others: $scope.interests[7].value
         })
     .then(function onSuccess(response){
       toastr.success('All the details are saved.','Profile is Updated!', {
@@ -110,8 +119,28 @@ angular.module('DashMod').controller('ModalCtrl',  function ($scope, $http, $uib
           closeButton:true
         })
     })
-  }
-
+    }
+    
+    $scope.updateAccount = function(){
+    $http.post('/account', {
+      email: $scope.user.email,
+      newemail: $scope.newemail,
+      password: $scope.oldpassword,
+      newpassword: $scope.newpassword
+    })
+    .then(function onSuccess(response){
+      toastr.success('All requested details are updated.','Account Settings are Updated!', {
+          closeButton:true
+        });
+        $uibModalInstance.dismiss('cancel');
+        window.location.reload(true);
+    })
+    .catch(function onError(err){
+      toastr.error('There is some error, try after some time.','Error!', {
+          closeButton:true
+        })
+    })
+    }
   $scope.cancel = function () {
     $uibModalInstance.dismiss('cancel');
   };

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Admin-BDCoE</title>
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/angular-material.min.css">
+  <link rel="stylesheet" href="/styles/angular-toastr.css">
+  <link rel="stylesheet" href="/styles/animate.css">
+  <link rel="stylesheet" href="/styles/dialogs.css">
+  <link rel="stylesheet" href="/styles/font-awesomenew.css">
+  <link rel="stylesheet" href="/styles/googleapis.css">
+  <link rel="stylesheet" href="/styles/hover.css">
+  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="/styles/sidebar-left.css">
+  <!--STYLES END-->
+  <script>
+    function scrollWin() {
+      window.scrollBy(0, 500);
+    }
+  </script>
+  </head>
+  <body ng-app="AdminMod" ng-controller="AdminCtrl">
+   <img id="preloader" src="images/preloader.gif" alt="" />
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+
+  <!-- PAGE -->
+  <div id="page">
+  
+    <!-- HEADER -->
+    <header>
+      
+      <!-- MENU BLOCK -->
+      <div class="menu_block">
+      
+        <!-- CONTAINER -->
+        <div class="container clearfix" style="min-width: 1050px;">
+          
+          <!-- LOGO -->
+          <div class="logo pull-left" style="cursor:default;height: 71px;padding-top: 10px;">
+            <a class="hvr-underline-from-center" style="height: 54px;"><span class="b1" style="padding-left: 11px;">B</span><span class="b2">D</span><span class="b3">C</span><span class="b4">o</span><span class="b5">E</span></a>
+          </div><!-- //LOGO -->
+          
+          <!-- MENU -->
+          <div class="pull-right">
+            <nav class="navmenu center">
+              <ul>
+                <li class="hvr-underline-from-left"><a href="/adminlogout"><span class=" glyphicon glyphicon-log-out " style="padding-right:3px"></span>Logout</a></li>
+              </ul>
+            </nav>
+          </div><!-- //MENU -->
+        </div><!-- //MENU BLOCK -->
+      </div><!-- //CONTAINER -->
+    </header><!-- //HEADER -->
+            <!-- Sidebar -->
+    <aside class="sidebar-left">
+    <div style="position: relative;margin-top: 0;margin-bottom: 0;height: 150px;">
+      <img class="img-circle" ng-src="/favicon.ico" style="position: relative;margin-left: 24%;margin-top: 16%;height: 100px;">
+    </div>
+
+    <div class="sidebar-links">
+      <a class="link-blue selected" href="/admin#/registered_students"><span class=" glyphicon glyphicon-user" style="padding-right:3px"></span>Registered Students</a>
+      <a class="link-red" href="/admin#/workshop_applied_students"><span class=" glyphicon glyphicon-wrench" style="padding-right:3px"></span>Workshop Registration</a>
+      <a class="link-yellow" href="/admin#/online_event_applied_students"><span class=" glyphicon glyphicon-flag" style="padding-right:3px"></span>Online Event Registration</a>
+      <a class="link-green" href="/admin#/answer_faq"><span class=" glyphicon glyphicon-info-sign" style="padding-right:3px"></span>Answer FAQs</a>
+    </div>
+  </aside>
+  <div ng-view class="animroute" style="position: relative;height: 597px;width: 100%;background-image: url(../images/white.png);min-width:1050px"></div>
+
+<!--SCRIPTS-->
+<script src="/js/dependencies/jquery.js"></script>
+<script src="/js/dependencies/bootstrap.min.js"></script>
+<script src="/js/dependencies/angular.js"></script>
+<script src="/js/dependencies/angular-animate.js"></script>
+<script src="/js/dependencies/angular-aria.min.js"></script>
+<script src="/js/dependencies/angular-material.min.js"></script>
+<script src="/js/dependencies/angular-messages.min.js"></script>
+<script src="/js/dependencies/angular-resource.js"></script>
+<script src="/js/dependencies/angular-route.js"></script>
+<script src="/js/dependencies/angular-toastr.js"></script>
+<script src="/js/dependencies/angular-toastr.tpls.js"></script>
+<script src="/js/dependencies/animate.js"></script>
+<script src="/js/dependencies/dialogs-default-translations.js"></script>
+<script src="/js/dependencies/dialogs.js"></script>
+<script src="/js/dependencies/jquery.BlackAndWhite.js"></script>
+<script src="/js/dependencies/jquery.flexslider-min.js"></script>
+<script src="/js/dependencies/jquery.nicescroll.min.js"></script>
+<script src="/js/dependencies/jquery.prettyPhoto.js"></script>
+<script src="/js/dependencies/members.js"></script>
+<script src="/js/dependencies/owl.carousel.js"></script>
+<script src="/js/dependencies/superfish.min.js"></script>
+<script src="/js/dependencies/ui-bootstrap-tpls-1.3.2.js"></script>
+<script src="/js/dependencies/wow.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/public/homepage/HomeMod.js"></script>
+<script src="/js/public/homepage/HomeCtrl.js"></script>
+<script src="/js/public/login/LoginMod.js"></script>
+<script src="/js/public/login/LoginCtrl.js"></script>
+<script src="/js/public/signup/SignupMod.js"></script>
+<script src="/js/public/signup/SignupCtrl.js"></script>
+<script src="/js/private/dashboard/DashMod.js"></script>
+<script src="/js/private/dashboard/DashCtrl.js"></script>
+<script src="/js/private/admin/AdminMod.js"></script>
+<script src="/js/private/admin/AdminCtrl.js"></script>
+<!--SCRIPTS END-->
+</body>
+</html>

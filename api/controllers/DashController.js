@@ -39,5 +39,125 @@ module.exports = {
 			}
 			return res.send(user);
 		})
+	},
+	account: function(req, res){
+		if((req.param('newemail').length > 0)&&(req.param('oldpassword').length > 0)&&(req.param('newpassword'.length > 0))){
+			User.update({
+			id: req.session.me
+			}, { email: req.param('newemail')}
+			).exec(function(err, account){
+			if(err){
+				console.log('Error: '+err);
+				return res.negotiate(err);
+					}
+			User.findOne({
+			id: req.session.me
+			}, function foundUser(err, user){
+			if(err){
+				return res.negotiate(err);
+			}
+			if(!user){
+				return res.notFound();
+			}
+			
+			require('machinepack-passwords').checkPassword({
+				passwordAttempt: req.param('oldpassword'),
+				encryptedPassword: user.password
+			}).exec({
+				error: function(err){
+					return res.negotiate(err);
+				},
+				incorrect: function(){
+					return res.notFound();
+				},
+				success: function(){
+						var Passwords = require('machinepack-passwords');
+
+		//Encrypt Password
+		Passwords.encryptPassword({
+			password: req.param('newpassword'),
+			difficulty: 10,
+		}).exec({
+			error: function(err){
+				return res.negotiate(err);
+			},
+			success: function(encryptedPassword){
+				require('machinepack-gravatar').getImageUrl({
+					emailAddress: user.email
+				}).exec({
+					error: function(err){
+						return res.negotiate(err);
+
+					},
+					success: function(){
+							return res.ok();
+						}
+					})
+					}
+				})
+				}
+			})
+			})
+			})
+		}else if(req.param('newemail').length > 0){
+		User.update({
+			id: req.session.me
+		}, { email: req.param('newemail')}
+			).exec(function(err, account){
+			if(err){
+				console.log('Error: '+err);
+				return res.negotiate(err);
+					}
+				return res.ok();
+			})
+		}else if((req.param('oldpassword').length > 0)&&(req.param('newpassword'.length > 0))){
+			User.findOne({
+			id: req.session.me
+			}, function foundUser(err, user){
+			if(err){
+				return res.negotiate(err);
+			}
+			if(!user){
+				return res.notFound();
+			}
+			require('machinepack-passwords').checkPassword({
+				passwordAttempt: req.param('oldpassword'),
+				encryptedPassword: user.password
+			}).exec({
+				error: function(err){
+					return res.negotiate(err);
+				},
+				incorrect: function(){
+					return res.notFound();
+				},
+				success: function(){
+						var Passwords = require('machinepack-passwords');
+
+		//Encrypt Password
+		Passwords.encryptPassword({
+			password: req.param('newpassword'),
+			difficulty: 10,
+		}).exec({
+			error: function(err){
+				return res.negotiate(err);
+			},
+			success: function(encryptedPassword){
+				require('machinepack-gravatar').getImageUrl({
+					emailAddress: user.email
+				}).exec({
+					error: function(err){
+						return res.negotiate(err);
+
+					},
+					success: function(){
+							return res.ok();
+						}
+					})
+					}
+				})
+				}
+			})
+			})
+		}
 	}
 };

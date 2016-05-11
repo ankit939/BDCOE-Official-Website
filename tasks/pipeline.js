@@ -50,7 +50,8 @@ var jsFilesToInject = [
   'js/public/signup/SignupCtrl.js',
   'js/private/dashboard/DashMod.js',
   'js/private/dashboard/DashCtrl.js',
-   'js/private/dashboard/ProfileCtrl.js'
+  'js/private/admin/AdminMod.js',
+  'js/private/admin/AdminCtrl.js',
   
 
 
