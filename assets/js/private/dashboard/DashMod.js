@@ -4,11 +4,8 @@ angular.module('DashMod', ['ngRoute','ngAnimate','ui.bootstrap','toastr','ngMate
    .when('/', {
     templateUrl: '/templates/profile.ejs',
   })
-  .when('/workshops', {
-    templateUrl: '/templates/workshops.ejs'
-  })
-  .when('/online_events', {
-    templateUrl: '/templates/online_events.ejs'
+  .when('/workshops&online_events', {
+    templateUrl: '/templates/workshops&online_events.ejs'
   })
   .when('/account_settings', {
     templateUrl: '/templates/account_settings.ejs'
