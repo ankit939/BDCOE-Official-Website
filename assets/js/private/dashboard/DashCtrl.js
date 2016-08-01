@@ -8,13 +8,13 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
       console.log(err);
     })
     
-    if($scope.user.data.studno == '0')
+    if($scope.user.studno == '0')
       $scope.user.studno = ''
       
-     if($scope.user.data.univno == '0')
+     if($scope.user.univno == '0')
       $scope.user.univno = ''
     
-     if($scope.user.data.mobileno == '0')
+     if($scope.user.mobileno == '0')
       $scope.user.mobileno = ''
   };
   getUser();
