@@ -7,6 +7,15 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
     .catch(function onError(err){
       console.log(err);
     })
+    
+    if($scope.user.data.studno == '0')
+      $scope.user.studno = ''
+      
+     if($scope.user.data.univno == '0')
+      $scope.user.univno = ''
+    
+     if($scope.user.data.mobileno == '0')
+      $scope.user.mobileno = ''
   };
   getUser();
   
