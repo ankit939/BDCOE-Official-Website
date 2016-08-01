@@ -26,6 +26,48 @@ module.exports = {
 		},
 		gravatarUrl: {
 			type: 'string'
+		},
+		studno: {
+			type: 'integer'
+		},
+		univno: {
+			type: 'integer'
+		},
+		branch: {
+			type: 'string'
+		},
+		section: {
+			type: 'string'
+		},
+		year: {
+			type: 'string'
+		},
+		mobileno: {
+			type: 'integer'
+		},
+		softdev: {
+			type: 'boolean'
+		},
+		webdev: {
+			type: 'boolean'
+		},
+		androiddev: {
+			type: 'boolean'
+		},
+		dataanalytics: {
+			type: 'boolean'
+		},
+		designing: {
+			type: 'boolean'
+		},
+		cloudcomp: {
+			type: 'boolean'
+		},
+		artificialint: {
+			type: 'boolean'
+		},
+		others: {
+			type: 'boolean'
 		}
 	}
 };

@@ -9,7 +9,7 @@ module.exports = {
 	},
 	createProfile: function(req, res){
 						// Create Profile
-						User.add({id: req.session.me}, {  
+						User.update({id: req.session.me}, {  
 							studno: req.param('studno'),
                 			univno: req.param('univno'),
                 			branch: req.param('branch'),
