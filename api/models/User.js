@@ -28,10 +28,12 @@ module.exports = {
 			type: 'string'
 		},
 		studno: {
-			type: 'string'
+			type: 'integer',
+			defaultsTo: '-'
 		},
 		univno: {
-			type: 'string'
+			type: 'integer',
+			defaultsTo: '-'
 		},
 		branch: {
 			type: 'string'
@@ -43,7 +45,9 @@ module.exports = {
 			type: 'string'
 		},
 		mobileno: {
-			type: 'string'
+			type: 'integer',
+			defaultsTo: '-'
+			
 		},
 		softdev: {
 			type: 'boolean'
