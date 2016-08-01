@@ -2,14 +2,14 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
   function getUser(){
     $http.get('/getuser')
     .then(function onSuccess(user){
-     if(user.studno == '0')
-      user.studno = '';
+     if(user.data.studno == '0')
+      user.data.studno = '';
       
-     if(user.univno == '0')
-      user.univno = '';
+     if(user.data.univno == '0')
+      user.data.univno = '';
     
-     if(user.mobileno == '0')
-      user.mobileno = '';
+     if(user.data.mobileno == '0')
+      user.data.mobileno = '';
       
       $scope.user = user.data;
     })
