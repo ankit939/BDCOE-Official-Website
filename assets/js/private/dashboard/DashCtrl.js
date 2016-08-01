@@ -2,20 +2,20 @@ angular.module('DashMod').controller('DashCtrl',['$scope', '$http','$uibModal', 
   function getUser(){
     $http.get('/getuser')
     .then(function onSuccess(user){
+       if(user.studno == '0')
+      user.studno = ''
+      
+     if(user.univno == '0')
+      user.univno = ''
+    
+     if(user.mobileno == '0')
+      user.mobileno = ''
+      
       $scope.user = user.data;
     })
     .catch(function onError(err){
       console.log(err);
     })
-    
-    if($scope.user.studno == '0')
-      $scope.user.studno = ''
-      
-     if($scope.user.univno == '0')
-      $scope.user.univno = ''
-    
-     if($scope.user.mobileno == '0')
-      $scope.user.mobileno = ''
   };
   getUser();
   
